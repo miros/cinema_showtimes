@@ -14822,3 +14822,91 @@ Rendering cinemas/show
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 5) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 39) [0m
 Completed in 81ms (View: 56, DB: 10) | 200 OK [http://localhost/cinemas/109]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#index (for 127.0.0.1 at 2010-08-04 16:05:35) [GET]
+  [4;36;1mCinema Load (0.3ms)[0m   [0;1mSELECT * FROM `cinemas` ORDER BY name ASC[0m
+Rendering cinemas/index
+  [4;35;1mCinema Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+Completed in 155ms (View: 72, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:05:36) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.4ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 8) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (4.4ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 8) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 9) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 4) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
+Completed in 131ms (View: 107, DB: 9) | 200 OK [http://localhost/cinemas/8]
