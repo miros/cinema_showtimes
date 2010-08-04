@@ -32,7 +32,16 @@
       <file leaf-file-name="afisha.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.66898954">
+            <state line="44" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.73519164">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="2" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -318,12 +327,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.db:reset" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="4" class="java.lang.String" itemvalue="Rails.Production: cinema_showtimes" />
-      <item index="5" class="java.lang.String" itemvalue="Rails.Development: cinema_showtimes" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: cinema_showtimes" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: cinema_showtimes" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.db:reset" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -494,14 +503,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="4" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.6358885">
+        <state line="35" column="2" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.66898954">
+        <state line="44" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.73519164">
           <folding />
         </state>
       </provider>

@@ -41,7 +41,7 @@ module Scrapers
             show_time_min, show_time_sec = time.split(':')
             now = DateTime.now.utc.in_time_zone('Moscow')
 
-            show.time = Time.local(now.year, now.month, now.day, show_time_min, show_time_sec, 0)
+            show.time = Time.utc(now.year, now.month, now.day, show_time_min, show_time_sec, 0)
            
             show.movie = movie
             show.cinema = cinema

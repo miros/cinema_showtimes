@@ -14910,3 +14910,791 @@ Rendering cinemas/show
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 2) [0m
 Completed in 131ms (View: 107, DB: 9) | 200 OK [http://localhost/cinemas/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#index (for 127.0.0.1 at 2010-08-04 16:26:55) [GET]
+  [4;36;1mCinema Load (0.3ms)[0m   [0;1mSELECT * FROM `cinemas` ORDER BY name ASC[0m
+Rendering cinemas/index
+  [4;35;1mCinema Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+Completed in 85ms (View: 68, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:27:01) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.4ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (4.6ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 73ms (View: 48, DB: 10) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:27:16) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.1ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 140ms (View: 121, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:27:16) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 55ms (View: 34, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:29:33) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.3ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 48ms (View: 28, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:29:34) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 51ms (View: 32, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:29:34) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 55ms (View: 35, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:29:35) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 49ms (View: 31, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:29:35) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 127ms (View: 110, DB: 3) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:29:36) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.1ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 30ms (View: 18, DB: 3) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:29:36) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 47ms (View: 28, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:04) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 52ms (View: 32, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:05) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.7ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 59ms (View: 38, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:06) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 51ms (View: 31, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:07) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 116ms (View: 98, DB: 3) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:07) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 54ms (View: 34, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:07) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.1ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 35ms (View: 18, DB: 3) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:08) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 44ms (View: 25, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:08) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 52ms (View: 32, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:08) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 54ms (View: 34, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:09) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 123ms (View: 104, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:09) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.1ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 30ms (View: 19, DB: 3) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:09) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 53ms (View: 34, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:10) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 50ms (View: 31, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:10) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 50ms (View: 31, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:10) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 66ms (View: 47, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:10) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 130ms (View: 112, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:11) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 51ms (View: 34, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:11) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 52ms (View: 32, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:11) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.3ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 47ms (View: 28, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:12) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 51ms (View: 32, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:12) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 50ms (View: 31, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:12) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 134ms (View: 115, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:13) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.1ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 34ms (View: 23, DB: 3) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:13) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 52ms (View: 33, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:13) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 51ms (View: 32, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:14) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 51ms (View: 32, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:14) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 47ms (View: 28, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:30:15) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.2ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 50ms (View: 31, DB: 4) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:31:44) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.1ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 29ms (View: 19, DB: 3) | 200 OK [http://localhost/cinemas/123]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:31:44) [GET]
+  Parameters: {"id"=>"123"}
+  [4;35;1mCinema Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `cinemas`[0m
+  [4;36;1mCinema Load (0.2ms)[0m   [0;1mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;35;1mShow Load (0.6ms)[0m   [0mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;36;1mShow Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `shows`[0m
+  [4;35;1mMovie Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 53ms (View: 34, DB: 5) | 200 OK [http://localhost/cinemas/123]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing CinemasController#show (for 127.0.0.1 at 2010-08-04 16:31:45) [GET]
+  Parameters: {"id"=>"123"}
+  [4;36;1mCinema Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `cinemas`[0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 123) [0m
+Rendering cinemas/show
+  [4;36;1mShow Load (0.2ms)[0m   [0;1mSELECT * FROM `shows` WHERE (`shows`.cinema_id = 123) ORDER BY time ASC[0m
+  [4;35;1mShow Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mMovie Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `movies`[0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mMovie Load (0.2ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+Completed in 53ms (View: 32, DB: 4) | 200 OK [http://localhost/cinemas/123]
