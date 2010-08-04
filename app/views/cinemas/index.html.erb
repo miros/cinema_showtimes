@@ -1,0 +1,5 @@
+<ul>
+<% @cinemas.each do |cinema| %>
+   <li>(id: <%= cinema.id %>) <%= link_to cinema.name, cinema %></li>
+<% end %>
+</ul>

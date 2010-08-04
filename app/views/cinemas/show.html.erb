@@ -1,0 +1,8 @@
+<h1><%= @cinema.name %> (<%= @cinema.city %>)</h1>
+
+<ul>
+<% @cinema.shows.each do |show| %>
+   <li>(<%= show.time %>) <%= show.movie.name %></li>
+<% end %>
+</ul>
+
