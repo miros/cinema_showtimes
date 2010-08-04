@@ -39,7 +39,7 @@ module Scrapers
             show = Show.new
 
             show_time_min, show_time_sec = time.split(':')
-            now = DateTime.now.utc
+            now = DateTime.now.utc.in_time_zone('Moscow')
 
             show.time = Time.utc(now.year, now.month, now.day, show_time_min, show_time_sec, 0)
            

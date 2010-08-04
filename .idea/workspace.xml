@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="d4561840-67ae-45c6-9bf8-3ab0cc92afa0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/scrapers/afisha.rb" afterPath="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
@@ -28,17 +27,7 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="afisha.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="34" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.62891984">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -64,8 +53,8 @@
         <option value="$PROJECT_DIR$/app/views/cinemas/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/cinema.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
       </list>
     </option>
   </component>
@@ -520,16 +509,16 @@
         <state line="3" column="27" selection-start="101" selection-end="101" vertical-scroll-proportion="-0.2979094" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.6358885">
+        <state line="44" column="38" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.728223">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="34" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.62891984">
+        <state line="35" column="25" selection-start="1754" selection-end="1754" vertical-scroll-proportion="0.6358885">
           <folding />
         </state>
       </provider>
