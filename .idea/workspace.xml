@@ -29,19 +29,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="afisha.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="afisha.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.73519164">
+            <state line="43" column="14" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="2" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0">
+            <state line="35" column="25" selection-start="1754" selection-end="1754" vertical-scroll-proportion="0.6358885">
               <folding />
             </state>
           </provider>
@@ -73,8 +73,8 @@
         <option value="$PROJECT_DIR$/app/views/cinemas/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/cinema.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
       </list>
     </option>
   </component>
@@ -501,16 +501,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="2" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0">
+        <state line="43" column="14" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.73519164">
+        <state line="35" column="25" selection-start="1754" selection-end="1754" vertical-scroll-proportion="0.6358885">
           <folding />
         </state>
       </provider>
