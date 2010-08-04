@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="d4561840-67ae-45c6-9bf8-3ab0cc92afa0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cinema_showtimes.iml" afterPath="$PROJECT_DIR$/.idea/cinema_showtimes.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/scrapers/afisha.rb" afterPath="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="cinema_showtimes.iws" />
@@ -29,10 +27,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="28" selection-start="1587" selection-end="1587" vertical-scroll-proportion="1.0923345">
+            <state line="33" column="28" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="afisha.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="19" selection-start="2021" selection-end="2021" vertical-scroll-proportion="0.83449477">
               <folding />
             </state>
           </provider>
@@ -58,7 +65,6 @@
         <option value="$PROJECT_DIR$/app/models/movie.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/scrap" />
         <option value="$PROJECT_DIR$/lib/tasks/scrap.rake" />
-        <option value="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/app/controllers/cinema_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -66,6 +72,7 @@
         <option value="$PROJECT_DIR$/app/views/cinemas/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/cinemas/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/cinema.rb" />
+        <option value="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
       </list>
     </option>
   </component>
@@ -125,7 +132,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,11 +483,6 @@
         <state line="11" column="44" selection-start="169" selection-end="169" vertical-scroll-proportion="0.3548387" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="13" selection-start="2004" selection-end="2004" vertical-scroll-proportion="0.5154827" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="2" selection-start="51" selection-end="51" vertical-scroll-proportion="0.06620209" />
@@ -497,7 +517,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="1587" selection-end="1587" vertical-scroll-proportion="1.0923345">
+        <state line="33" column="28" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="19" selection-start="2021" selection-end="2021" vertical-scroll-proportion="0.83449477">
           <folding />
         </state>
       </provider>

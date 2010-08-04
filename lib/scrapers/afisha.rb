@@ -62,7 +62,8 @@ module Scrapers
       def get_html(url)
         url = AFISHA_URL + url
         puts "Url: #{url}"
-        html = open(url, :proxy => "http://192.168.1.250:3128",
+        proxy = nil #"http://192.168.1.250:3128"
+        html = open(url, :proxy => proxy,
           "Referer" => "http://www.afisha.ru",
           "User-Agent" => "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.19) Gecko/2010040116 Ubuntu/9.04 (jaunty) Firefox/3.0.19 FirePHP/0.4",
           "Accept-Charset" => "UTF-8,*"
