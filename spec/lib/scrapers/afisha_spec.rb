@@ -18,7 +18,6 @@ describe Scrapers::Afisha do
 
   end
 
-
   it "should scrap 'Salt' movie" do
 
     salt_shows = @all_shows.find_all {|show| show[:movie][:name] == 'Солт' and show[:cinema][:name] == 'Высота' }
@@ -26,12 +25,26 @@ describe Scrapers::Afisha do
 
     salt_shows.find { |show| show[:time].hour == 14 and show[:time].min == 50 }.
             should_not be_nil
-
   end
 
   it "should scrap 3d movie 'Cats vs Dogs'" do
     shows = @all_shows.find_all {|show| show[:movie][:name] == 'Кошки против собак: Месть Китти Галор' and show[:cinema][:name] == 'Каро Фильм Атриум' }
     shows.should have(15).shows
+  end
+
+  it "should correctly handle times after midnight" do
+
+    show = @all_shows.find {|show|
+      show[:movie][:name] == 'Начало' and
+      show[:cinema][:name] == 'Бумеранг на Варшавской' and
+      show[:time].hour == 1 and
+      show[:time].min == 15
+    }
+
+    tomorrow = DateTime.now.utc.in_time_zone('Moscow').tomorrow
+
+    show[:time].day.should equal(tomorrow.day)
+    show[:time].month.should equal(tomorrow.month)
   end
 
 end

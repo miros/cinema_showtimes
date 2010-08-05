@@ -4,6 +4,8 @@ require "open-uri"
 
 module Scrapers
 
+  # @TODO add logging
+
   class Afisha
 
     AFISHA_URL = "http://www.afisha.ru"    
@@ -71,10 +73,12 @@ module Scrapers
       def create_show(cinema, movie, time)
         show = {}
 
-        show_time_min, show_time_sec = time.split(':')
-        now = DateTime.now.utc.in_time_zone('Moscow')
+        show_time_hour, show_time_min = time.split(':')
+        show_date = DateTime.now.utc.in_time_zone('Moscow')
 
-        show[:time] = Time.utc(now.year, now.month, now.day, show_time_min, show_time_sec, 0)
+        show_date = show_date.tomorrow if (0..4) === show_time_hour.to_i
+
+        show[:time] = Time.utc(show_date.year, show_date.month, show_date.day, show_time_hour, show_time_min, 0)
         show[:movie] = movie
         show[:cinema] = cinema
         return show
