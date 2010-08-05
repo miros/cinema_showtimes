@@ -1,12 +1,15 @@
 Rake.application.options.trace = true
 
-task :scrap => :scrap_afisha do
+namespace :scrap do
 
-end
+  task :all => [:afisha]
+  task :clean => ['db:reset', :all]
 
-task :scrap_afisha => :environment do
-
-  scraper = Scrapers::Afisha.new
-  scraper.scrap
+  task :afisha => :environment do
+    browser = Browser.new
+    scraper = Scrapers::Afisha.new(browser)
+    shows = scraper.scrap
+    ShowsCreator.new.create_shows(shows)
+  end
 
 end

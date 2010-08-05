@@ -4,6 +4,8 @@ describe CinemasController do
 
   integrate_views
 
+  # @TODO refactor all this test crap
+
   describe "GET 'cinemas'" do
     it "should be successful" do
 

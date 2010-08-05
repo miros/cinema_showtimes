@@ -8,52 +8,80 @@ module Scrapers
 
     AFISHA_URL = "http://www.afisha.ru"    
 
+    def initialize(browser)
+      @browser = browser
+      @browser.referer = AFISHA_URL
+    end
+
     def scrap
+      @shows = []
+
       today_shows_page = parse_url '/msk/schedule_cinema/'
+
       today_shows_page.css('#schedule .object').each do |movie_block|
         parse_movie_block(movie_block)
       end
 
+      @shows
     end
 
     private
 
       def parse_movie_block(movie_block)
         movie_name = movie_block.at_css('.usetags a').content
-
-        movie = Movie.find_or_create_by_name(movie_name)
+        movie = {:name => movie_name}
 
         movie_block.css('tr').each do |cinema_block|
-          next if cinema_block['id'] == nil
+          parse_cinema_block(movie, cinema_block)
+        end
+      end
 
-          cinema_name = cinema_block.at_css('.b-td-item a').content
-          cinema = Cinema.find_or_create_by_name_and_city(:name => cinema_name, :city => 'москва')
+      def parse_cinema_block(movie, cinema_block)
+        return if cinema_block['id'] == nil
 
-          show_times = parse_show_times(cinema_block)
+        cinema_name = cinema_block.at_css('.b-td-item a').content
+        cinema = {:name => cinema_name, :city => 'москва'}
 
-          if cinema_block['class'] == 's-tr-next3d'
-            show_times += parse_show_times(cinema_block.next)
-          end
+        show_times = create_show_times(cinema_block)
+        create_shows(cinema, movie, show_times)
+      end
 
-          show_times.each do |time|
-            show = Show.new
+      def create_show_times(cinema_block)
+        show_times = parse_show_times(cinema_block)
+        show_times += parse_show_times_for_3d_movies(cinema_block)
+        return show_times
+      end
 
-            show_time_min, show_time_sec = time.split(':')
-            now = DateTime.now.utc.in_time_zone('Moscow')
+      def create_shows(cinema, movie, show_times)
+        show_times.each do |time|
+          show = create_show(cinema, movie, time)
+          @shows << show
+        end
+      end
 
-            show.time = Time.utc(now.year, now.month, now.day, show_time_min, show_time_sec, 0)
-           
-            show.movie = movie
-            show.cinema = cinema
-            show.save!
-          end
+      def parse_show_times_for_3d_movies(cinema_block)
+        return [] if not next_block_is_for_3d_movies(cinema_block)
+        parse_show_times(cinema_block.next)
+      end
 
-         end
+      def next_block_is_for_3d_movies(cinema_block)
+        cinema_block['class'] == 's-tr-next3d'
+      end
 
+      def create_show(cinema, movie, time)
+        show = {}
+
+        show_time_min, show_time_sec = time.split(':')
+        now = DateTime.now.utc.in_time_zone('Moscow')
+
+        show[:time] = Time.utc(now.year, now.month, now.day, show_time_min, show_time_sec, 0)
+        show[:movie] = movie
+        show[:cinema] = cinema
+        return show
       end
 
       def parse_show_times(cinema_block)
-          cinema_block.css('.b-td-timetable .line span').map {|time_block| time_block.content.strip }
+        cinema_block.css('.b-td-timetable .line span').map {|time_block| time_block.content.strip }
       end
 
       def parse_url(url)
@@ -64,15 +92,9 @@ module Scrapers
       def get_html(url)
         url = AFISHA_URL + url
         puts "Url: #{url}"
-        proxy = nil #"http://192.168.1.250:3128"
-        html = open(url, :proxy => proxy,
-          "Referer" => "http://www.afisha.ru",
-          "User-Agent" => "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.19) Gecko/2010040116 Ubuntu/9.04 (jaunty) Firefox/3.0.19 FirePHP/0.4",
-          "Accept-Charset" => "UTF-8,*"
-        ).read
+        html = @browser.get(url)
         html
       end
-
 
   end
 
