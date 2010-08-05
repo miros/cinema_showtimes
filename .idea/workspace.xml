@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="d4561840-67ae-45c6-9bf8-3ab0cc92afa0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/cinemas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/cinemas_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/lib/scrapers/afisha_spec.rb" afterPath="$PROJECT_DIR$/spec/lib/scrapers/afisha_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/cinemas_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/cinemas_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/scrapers/afisha.rb" afterPath="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/test.log" afterPath="$PROJECT_DIR$/log/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/scrap.rake" afterPath="$PROJECT_DIR$/lib/tasks/scrap.rake" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="cinema_showtimes.iws" />
@@ -32,19 +29,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="afisha.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
+      <file leaf-file-name="cinemas_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/cinemas_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="45" selection-start="1997" selection-end="1997" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="afisha_spec.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/lib/scrapers/afisha_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="0.040069688">
+            <state line="7" column="36" selection-start="181" selection-end="181" vertical-scroll-proportion="0.32439023">
               <folding />
             </state>
           </provider>
@@ -63,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/cinemas/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/cinema.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
@@ -79,8 +66,16 @@
         <option value="$PROJECT_DIR$/lib/tasks/scrap.rake" />
         <option value="$PROJECT_DIR$/lib/scrapers/afisha.rb" />
         <option value="$PROJECT_DIR$/spec/lib/scrapers/afisha_spec.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/cinemas_controller.rb" />
       </list>
     </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="true" id="Add" />
@@ -108,6 +103,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,11 +152,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scrapers" />
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -172,7 +166,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -186,30 +184,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scrapers" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Rake.db:migrate">
+  <component name="RunManager" selected="Rails.Development: cinema_showtimes">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="cinema_showtimes" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e STDOUT.sync=true;STDERR.sync=true;load($0=ARGV.shift)" />
@@ -403,6 +412,8 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="CHOOSE_MANUALLY" VALUE="true" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
     <list size="6">
@@ -459,10 +470,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21714744" sideWeight="0.65909094" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2411859" sideWeight="0.70941556" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287891" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -504,114 +515,84 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="276" selection-end="276" vertical-scroll-proportion="0.23170732">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="82" selection-end="82" vertical-scroll-proportion="0.16129032">
-          <folding />
-        </state>
+        <state line="5" column="17" selection-start="82" selection-end="82" vertical-scroll-proportion="0.16129032" />
       </provider>
     </entry>
     <entry file="file:///usr/lib/ruby/gems/1.8/gems/rspec-1.3.0/lib/spec/mocks/methods.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="6" selection-start="1180" selection-end="1180" vertical-scroll-proportion="1.2247387">
-          <folding />
-        </state>
+        <state line="37" column="6" selection-start="1180" selection-end="1180" vertical-scroll-proportion="1.2247387" />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/rubystubs18/enumerable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="267" column="6" selection-start="8900" selection-end="8900" vertical-scroll-proportion="0.7198642">
-          <folding />
-        </state>
+        <state line="267" column="6" selection-start="8900" selection-end="8900" vertical-scroll-proportion="0.7198642" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/config.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="36" selection-start="29" selection-end="42" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="36" selection-start="29" selection-end="42" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/rcov.opts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec.opts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="57" selection-start="172" selection-end="194" vertical-scroll-proportion="0.099303134">
-          <folding />
-        </state>
+        <state line="3" column="57" selection-start="172" selection-end="194" vertical-scroll-proportion="0.099303134" />
       </provider>
     </entry>
     <entry file="file:///usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/object/misc.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="6" selection-start="2405" selection-end="2405" vertical-scroll-proportion="0.5365854">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/cinemas_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="21" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="76" column="6" selection-start="2405" selection-end="2405" vertical-scroll-proportion="0.5365854" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/browser.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.20557491">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.20557491" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/rspec.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.3832753">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.3832753" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/shows_creator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="26" selection-end="38" vertical-scroll-proportion="0.06451613">
-          <folding />
-        </state>
+        <state line="2" column="18" selection-start="26" selection-end="38" vertical-scroll-proportion="0.06451613" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/scrap.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="298" selection-end="298" vertical-scroll-proportion="0.38709676">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="45" selection-start="1997" selection-end="1997" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="8" selection-start="298" selection-end="298" vertical-scroll-proportion="0.38709676" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/lib/scrapers/afisha_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="0.040069688">
+        <state line="46" column="51" selection-start="1364" selection-end="1364" vertical-scroll-proportion="1.5226481" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="51" selection-start="74" selection-end="74" vertical-scroll-proportion="0.16550523" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/controllers/cinemas_controller_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="6" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.4703833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cinemas_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="36" selection-start="181" selection-end="181" vertical-scroll-proportion="0.32439023">
           <folding />
         </state>
       </provider>

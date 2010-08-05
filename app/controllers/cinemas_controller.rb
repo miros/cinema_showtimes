@@ -5,7 +5,11 @@ class CinemasController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => @cinema }
+      format.json { render :json => @cinema.to_json(:include => {
+              :shows => {
+                :include => :movie        
+              }
+      }) }
     end
 
   end
