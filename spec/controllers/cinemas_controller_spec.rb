@@ -9,15 +9,14 @@ describe CinemasController do
     before(:each) do
       @cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name')
       Cinema.should_receive(:find).with(:all, {:order=>"name ASC"}).and_return([@cinema])
+      get 'index'
     end
 
     it "should be success" do
-      get 'index'      
       response.should be_success
     end
 
     it "should show cinema names" do
-      get 'index'
       response.should have_tag('span.cinema_name', @cinema.name)
     end
 

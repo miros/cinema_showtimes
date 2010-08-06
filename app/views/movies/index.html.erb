@@ -1,0 +1,5 @@
+<ul>
+    <% @movies.each do |movie| %>
+       <li><span class="movie_name"><%= link_to movie.name, movie %></span></li>
+    <% end %>
+</ul>
