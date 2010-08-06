@@ -4,45 +4,58 @@ describe CinemasController do
 
   integrate_views
 
-  # @TODO refactor all this test crap
+  describe "GET /cinemas" do
 
-  describe "GET 'cinemas'" do
-    it "should correctly show cinemas list" do
-
-      cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name')
-      Cinema.should_receive(:find).with(:all, {:order=>"name ASC"}).and_return([cinema])
-
-      get 'index'
-      response.should be_success
-      response.should include_text '1'
-      response.should include_text 'test_cinema_name'
-
+    before(:each) do
+      @cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name')
+      Cinema.should_receive(:find).with(:all, {:order=>"name ASC"}).and_return([@cinema])
     end
+
+    it "should be success" do
+      get 'index'      
+      response.should be_success
+    end
+
+    it "should show cinema names" do
+      get 'index'
+      response.should have_tag('span.cinema_name', @cinema.name)
+    end
+
   end
 
-  describe "GET 'cinemas/1'" do
-    it "should correctly show cinema info" do
+  describe "GET cinemas/:id" do
 
-      cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name', :city => 'москва')
-      show = mock_model(Show, :time => '12:00')
-      movie = mock_model(Movie, :name => 'test_movie_name')
-
-      cinema.should_receive(:shows).and_return([show])
-      show.should_receive(:movie).and_return(movie)
-
-      Cinema.should_receive(:find).with('1').and_return(cinema)
-
+    def get_cinemas_show
       get 'show', {:id => '1'}
-
-      response.should be_success
-
-      response.should include_text '1'
-      response.should include_text 'test_cinema_name'
-      response.should include_text 'москва'
-      response.should include_text 'test_movie_name'
-      response.should include_text '12:00'
-
     end
+
+    before(:each) do
+      @cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name', :city => 'москва')
+      @movie = mock_model(Movie, :name => 'test_movie_name')
+      @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :movie => @movie)
+
+      @cinema.should_receive(:shows).at_least(:once).and_return([@show, @show, @show])
+      Cinema.should_receive(:find).with('1').and_return(@cinema)
+
+      get_cinemas_show
+    end
+
+    it "should be success" do
+       response.should be_success
+    end
+
+    it "should display cinema name" do
+      response.should have_tag('h1', /#{@cinema.name}/)
+    end
+
+    it "should display show time correctly" do
+      response.should have_tag('span.show_time', '12:50 (01-01-2010)')
+    end
+
+    it "should display all shows" do
+      assigns[:cinema].should have(3).shows
+    end
+
   end
 
 
