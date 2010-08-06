@@ -2,9 +2,9 @@ class MoviesController < ApplicationController
 
   def index
 
-    # @TODO make implementation of ordering that can be tested
+    # @TODO make implementation of ordering that can be tested. find other ways of doing it
 
-    @movies = Movie.all(:joins => :shows, :group => 'movies.id, movies.name', :order => 'count(shows.id) desc')
+    @movies = Movie.ordered_by_popularity
 
     respond_to do |format|
       format.html

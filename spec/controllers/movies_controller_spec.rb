@@ -9,7 +9,7 @@ describe MoviesController do
     before(:each) do
       
       @movie = mock_model(Movie, :id => 1, :name => 'test_movie')
-      Movie.should_receive(:find).and_return([@movie])
+      Movie.should_receive(:ordered_by_popularity).and_return([@movie])
       get 'index'
     end
 
