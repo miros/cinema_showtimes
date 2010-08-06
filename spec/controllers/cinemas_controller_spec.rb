@@ -7,7 +7,7 @@ describe CinemasController do
   # @TODO refactor all this test crap
 
   describe "GET 'cinemas'" do
-    it "should be successful" do
+    it "should correctly show cinemas list" do
 
       cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name')
       Cinema.should_receive(:find).with(:all, {:order=>"name ASC"}).and_return([cinema])
@@ -21,7 +21,7 @@ describe CinemasController do
   end
 
   describe "GET 'cinemas/1'" do
-    it "should be successful" do
+    it "should correctly show cinema info" do
 
       cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name', :city => 'москва')
       show = mock_model(Show, :time => '12:00')

@@ -7,7 +7,7 @@ namespace :scrap do
 
   task :afisha => :environment do
     browser = Browser.new
-    scraper = Scrapers::Afisha.new(browser)
+    scraper = Scrapers::Afisha::Scraper.new(browser, Scrapers::Afisha::ShowsParser.new)
     shows = scraper.scrap
     ShowsCreator.new.create_shows(shows)
   end
