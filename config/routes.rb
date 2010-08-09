@@ -1,6 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :cinemas, :movies
+  # @TODO test custom routes
+
+  map.actual_movie_shows 'movies/:id/actual', :controller => :movies, :action => :show, :actual => true
+  map.resources :cinemas
+  map.resources :movies
+
   map.root :controller => :cinemas
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,7 @@
+<h1 class="movie_name"><%= @movie.name %></h1>
+
+<ul>
+<% @shows.each do |show| %>
+   <li><span class="show_time"><%= show.time_formatted %></span> <span class="cinema_name"><%= show.cinema.name %></span></li>
+<% end %>
+</ul>

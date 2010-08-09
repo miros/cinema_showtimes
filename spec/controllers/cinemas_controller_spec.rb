@@ -32,7 +32,8 @@ describe CinemasController do
       @cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name', :city => 'москва')
       @movie = mock_model(Movie, :name => 'test_movie_name')
       @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :movie => @movie)
-
+      @show.should_receive(:time_formatted).at_least(:once).and_return('12:50 (01-01-2010)')
+      
       @cinema.should_receive(:shows).at_least(:once).and_return([@show, @show, @show])
       Cinema.should_receive(:find).with('1').and_return(@cinema)
 

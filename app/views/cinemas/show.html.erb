@@ -2,7 +2,7 @@
 
 <ul>
 <% @cinema.shows.each do |show| %>
-   <li><span class="show_time"><%= show.time.strftime('%H:%M (%d-%m-%Y)') %></span> <span class="movie_name"><%= show.movie.name %></span></li>
+   <li><span class="show_time"><%= show.time_formatted %></span> <span class="movie_name"><%= show.movie.name %></span></li>
 <% end %>
 </ul>
 

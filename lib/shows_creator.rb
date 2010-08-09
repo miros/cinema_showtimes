@@ -2,7 +2,7 @@ class ShowsCreator
 
   def create_shows(shows)
     shows.each do |show|
-      cinema_hash= show[:cinema]
+      cinema_hash = show[:cinema]
       cinema = Cinema.find_or_create_by_name(cinema_hash[:name], cinema_hash)
 
       movie_hash = show[:movie]
