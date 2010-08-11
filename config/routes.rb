@@ -2,7 +2,9 @@ ActionController::Routing::Routes.draw do |map|
 
   # @TODO test custom routes
 
-  map.actual_movie_shows 'movies/:id/actual', :controller => :movies, :action => :show, :actual => true
+  map.movie_shows_actual 'movies/:id/actual', :controller => :movies, :action => :show, :actual => true, :date => 'today'
+  map.movie_shows_by_date 'movies/:id/:date', :controller => :movies, :action => :show, :date => 'today'
+
   map.resources :cinemas
   map.resources :movies
 

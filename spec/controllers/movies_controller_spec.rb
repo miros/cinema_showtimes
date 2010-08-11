@@ -22,36 +22,17 @@ describe MoviesController do
 
   end
 
-  # @TODO REFACTOR  "get /movies/:id/actual" and "get /movies/:id"
-
-  describe "get /movies/:id/actual" do
-
-    before(:each) do
-      @movie = mock_model(Movie, :id => 1, :name => 'test_movie')
-      Movie.should_receive(:find).and_return(@movie)
-      @movie.should_receive(:actual_shows).and_return([])
-
-    end
-
-    it "should be able to show actual showtimes" do
-      get 'show', {:id => '1', :actual => true}
-    end
-
-  end
-
-
   describe "get /movies/:id" do
 
     before(:each) do
-      @movie = mock_model(Movie, :id => 1, :name => 'test_movie')
+      @movie = mock_model(Movie, :name => 'test_movie')
       Movie.should_receive(:find).and_return(@movie)
 
-      @cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name', :city => 'москва')
-      @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :cinema => @cinema)
-      @show.should_receive(:time_formatted).at_least(:once).and_return('12:50 (01-01-2010)')
+      @cinema = mock_model(Cinema, :name => 'test_cinema_name')
+      @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :cinema => @cinema, :time_formatted => '12:50 (01-01-2010)')
 
       @movie.stub(:shows).and_return(@shows = [@show.clone, @show.clone, @show.clone])
-      @movie.should_receive(:all_shows).and_return(@shows)
+      @movie.should_receive(:search).and_return(@shows)
 
       get 'show', {:id => '1'}
     end
@@ -73,5 +54,6 @@ describe MoviesController do
     end
 
   end
+
 
 end

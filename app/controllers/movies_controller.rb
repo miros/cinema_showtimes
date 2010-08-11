@@ -17,11 +17,7 @@ class MoviesController < ApplicationController
 
   def show
 
-    if params[:actual]
-      @shows = @movie.actual_shows
-    else
-      @shows = @movie.all_shows
-    end
+    @shows = @movie.search(params)
 
     respond_to do |format|
       format.html
@@ -35,6 +31,5 @@ class MoviesController < ApplicationController
     def find_movie
       @movie = Movie.find(params[:id])
     end
-
 
 end
