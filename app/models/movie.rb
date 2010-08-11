@@ -9,7 +9,13 @@ class Movie < ActiveRecord::Base
     found_shows = shows.by_date
 
     found_shows = found_shows.actual if params[:actual]
-    found_shows = found_shows.in_interval(params) if (params[:from] or params[:to])
+
+    if (params[:from] or params[:to])
+      from = parse_time_param(params[:from]) || Time.now
+      to = parse_time_param(params[:to]) || Time.now.end_of_day
+      found_shows = found_shows.in_interval(from, to)
+    end
+
     found_shows = found_shows.for_date(date_param_to_date_object(params[:date]))
 
     found_shows
@@ -26,6 +32,12 @@ class Movie < ActiveRecord::Base
         else
           Date.parse(date_param)
       end
+    end
+
+    def parse_time_param(param)
+      return false if (!param || param.blank?)
+      param = param + ':00' if !param.include?(':')
+      Time.parse(param)
     end
 
 end

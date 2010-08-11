@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Movie, 'Search shows behaviour' do
+describe Movie, 'Search' do
 
   before(:each) do
     @movie = Movie.new()
@@ -9,6 +9,10 @@ describe Movie, 'Search shows behaviour' do
     @shows_scope.stub(:for_date).and_return(@shows_scope)
     
     @movie.stub_chain(:shows, :by_date).and_return(@shows_scope)
+
+    @time_now = Time.now
+    Time.stub!(:now).and_return(@time_now)
+
   end
 
   it "should search actual shows" do
@@ -44,8 +48,15 @@ describe Movie, 'Search shows behaviour' do
     should_search_for_time :to => '14:00'
   end
 
+  it "should accept poorly formatted time" do
+   @shows_scope.should_receive(:in_interval).with(Time.parse('16:00'), Time.parse('18:00')).and_return(@shows_scope)
+   @movie.search(:from => '16', :to => '18')
+  end
+  
   def should_search_for_time(params) 
-    @shows_scope.should_receive(:in_interval).with(params).and_return(@shows_scope)
+    from = (params[:from]) ? Time.parse(params[:from]) : Time.now
+    to = (params[:to]) ? Time.parse(params[:to]) : Time.now.end_of_day
+    @shows_scope.should_receive(:in_interval).with(from, to).and_return(@shows_scope)
     @movie.search(params)
   end
 

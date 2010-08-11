@@ -2,8 +2,6 @@ class MoviesController < ApplicationController
 
   def index
 
-    # @TODO make implementation of ordering that can be tested. find other ways of doing it
-
     @movies = Movie.all_by_popularity
 
     respond_to do |format|

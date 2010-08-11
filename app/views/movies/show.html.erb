@@ -1,7 +1,29 @@
 <h1 class="movie_name"><%= @movie.name %></h1>
 
+[<%= link_to 'Актуальные', movie_shows_actual_path(@movie) %>]
+[<%= link_to 'Сегодня', movie_shows_by_date_path(@movie, :date => 'today') %>]
+[<%= link_to 'Завтра', movie_shows_by_date_path(@movie, :date => 'tomorrow') %>]
+[<%= link_to 'Послезавтра', movie_shows_by_date_path(@movie, :date => Date.tomorrow.tomorrow) %>]
+
+
+<h4>Время начала сеанса:</h4>
+<p>
+    <% form_tag url_for(@movie) do %>
+
+       <%= text_field_tag :from, params[:from] %>
+       -
+       <%= text_field_tag :to, params[:to] %>
+       <%= hidden_field_tag :date, params[:date] %>
+       <%= submit_tag "Поиск", :name => nil %>
+    <% end %>
+
+    [<%= link_to_shows_starting_at 'Через полчаса', @movie, 30.minutes %>]
+    [<%= link_to_shows_starting_at 'Через час', @movie, 1.hour %>]
+    [<%= link_to_shows_starting_at 'Через полтора часа', @movie, 1.hour + 30.minutes %>]
+</p>
+
 <ul>
 <% @shows.each do |show| %>
-   <li><span class="show_time"><%= show.time_formatted %></span> <span class="cinema_name"><%= show.cinema.name %></span></li>
+   <li><span class="show_time"><%= show.time_formatted %></span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span></li>
 <% end %>
 </ul>
