@@ -2,7 +2,9 @@
 
 <ul>
 <% @cinema.shows.each do |show| %>
-   <li><span class="show_time"><%= show.time_formatted %></span> <span class="movie_name"><%= show.movie.name %></span></li>
+    <li>
+        <span class="show_time"><%= show.time_formatted %></span> <span class="movie_name"><%= link_to show.movie.name, movie_path(show.movie) %></span>
+    </li>  
 <% end %>
 </ul>
 

@@ -1,5 +1,8 @@
 <ul>
     <% @cinemas.each do |cinema| %>
-       <li><span class="cinema_name"><%= link_to cinema.name, cinema %></span></li>
+       <li>
+         <span class="cinema_name"><%= link_to cinema.name, cinema %></span>
+         <%= add_cinema_to_favourites_link(cinema) %>
+       </li>
     <% end %>
 </ul>

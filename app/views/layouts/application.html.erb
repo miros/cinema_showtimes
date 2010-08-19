@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+
+    <div id="login_information">
+    <% if logged_in? %>
+        Welcome <%=h current_user.username %>!
+        <%= link_to "Любимые кинотеатры", favourite_cinemas_path %>
+        <%= link_to "Log out", logout_path %>
+    <% else %>
+        <%= link_to "Sign up", signup_path %> or
+        <%= link_to "log in", login_path %>.
+    <% end %>
+    </div>
+
+    <div id="container">
+      <div id="menu">
+        [<%= link_to 'Фильмы', movies_path %>]
+        [<%= link_to 'Кинотеатры', cinemas_path %>]
+      </div>
+
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      <%- if show_title? -%>
+        <h1><%=h yield(:title) %></h1>
+      <%- end -%>
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>

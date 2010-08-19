@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
 
   def show
 
-    @shows = @movie.search(params)
+    @shows = @movie.search(params, current_user)
 
     respond_to do |format|
       format.html

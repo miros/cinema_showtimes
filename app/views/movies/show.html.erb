@@ -5,15 +5,18 @@
 [<%= link_to 'Завтра', movie_shows_by_date_path(@movie, :date => 'tomorrow') %>]
 [<%= link_to 'Послезавтра', movie_shows_by_date_path(@movie, :date => Date.tomorrow.tomorrow) %>]
 
-
 <h4>Время начала сеанса:</h4>
 <p>
-    <% form_tag url_for(@movie) do %>
+    <% form_tag '' do %>
 
-       <%= text_field_tag :from, params[:from] %>
+       <%= text_field_tag :from, params[:from] || Time.now.strftime('%H:%M') %>
        -
-       <%= text_field_tag :to, params[:to] %>
-       <%= hidden_field_tag :date, params[:date] %>
+       <%= text_field_tag :to, params[:to] || Time.now.end_of_day.strftime('%H:%M') %>
+
+       <br />
+       Только в любимых кинотеатрах:
+       <%= check_box_tag :favourite_cinemas, 1 ,params[:favourite_cinemas] %>
+      
        <%= submit_tag "Поиск", :name => nil %>
     <% end %>
 
@@ -24,6 +27,9 @@
 
 <ul>
 <% @shows.each do |show| %>
-   <li><span class="show_time"><%= show.time_formatted %></span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span></li>
+   <li>
+     <span class="show_time"><%= show.time_formatted %></span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
+     <%= add_cinema_to_favourites_link(show.cinema) %>
+   </li>
 <% end %>
 </ul>

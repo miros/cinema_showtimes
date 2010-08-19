@@ -72,8 +72,8 @@ module Scrapers::Afisha
 
         show_date = @date
         show_date = show_date.tomorrow if (0..4) === show_time_hour.to_i
-
-        show[:time] = Time.utc(show_date.year, show_date.month, show_date.day, show_time_hour, show_time_min, 0)
+        
+        show[:time] = Time.zone.local(show_date.year, show_date.month, show_date.day, show_time_hour, show_time_min, 0)
         show[:movie] = movie
         show[:cinema] = cinema
         return show
