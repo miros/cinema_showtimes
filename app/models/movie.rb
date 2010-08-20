@@ -6,7 +6,7 @@ class Movie < ActiveRecord::Base
 
   def search(params, user = nil)
 
-    found_shows = shows.by_date
+    found_shows = shows.ordered_by_date
     found_shows = found_shows.actual if params[:actual]
 
     found_shows = found_shows.in_favourite_cinemas(user) if (params[:favourite_cinemas] && user)

@@ -8,7 +8,7 @@ describe Movie, 'Search' do
     @shows_scope = mock('shows scope')
     @shows_scope.stub(:for_date).and_return(@shows_scope)
     
-    @movie.stub_chain(:shows, :by_date).and_return(@shows_scope)
+    @movie.stub_chain(:shows, :ordered_by_date).and_return(@shows_scope)
 
     @time_now = Time.now
     Time.stub!(:now).and_return(@time_now)

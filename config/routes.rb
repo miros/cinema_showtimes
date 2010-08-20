@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :favourite_cinemas
+  map.resources :favourite_cinemas, :only => [:index, :create, :destroy]
 
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.logout 'logout', :controller => 'sessions', :action => 'destroy'
@@ -8,17 +8,14 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
-
-  # @TODO test custom routes
-
-  map.resources :movies, :only => [:index, :show]
+  map.resources :movies, :only => [:index]
   map.movie_shows_actual 'movies/:id/actual', :controller => :movies, :action => :show, :actual => true, :date => 'today'
   map.movie_shows_by_date 'movies/:id/:date', :controller => :movies, :action => :show, :date => 'today'
-
+  map.resources :movies, :only => [:show]
   map.resources :cinemas
 
 
-  map.root :controller => :cinemas
+  map.root :controller => :movies
 
   # The priority is based upon order of creation: first created -> highest priority.
 

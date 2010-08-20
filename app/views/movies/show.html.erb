@@ -1,11 +1,13 @@
 <h1 class="movie_name"><%= @movie.name %></h1>
 
-[<%= link_to 'Актуальные', movie_shows_actual_path(@movie) %>]
-[<%= link_to 'Сегодня', movie_shows_by_date_path(@movie, :date => 'today') %>]
-[<%= link_to 'Завтра', movie_shows_by_date_path(@movie, :date => 'tomorrow') %>]
-[<%= link_to 'Послезавтра', movie_shows_by_date_path(@movie, :date => Date.tomorrow.tomorrow) %>]
+[<%= link_to_if !params[:actual], 'Сегодня', movie_shows_actual_path(@movie) %>]
+[<%= link_to_if params[:date] != 'tomorrow', 'Завтра', movie_shows_by_date_path(@movie, :date => 'tomorrow') %>]
+[<%= link_to_if params[:date] != Date.tomorrow.tomorrow.to_s, 'Послезавтра', movie_shows_by_date_path(@movie, :date => Date.tomorrow.tomorrow) %>]
 
 <h4>Время начала сеанса:</h4>
+    [<%= link_to_shows_starting_at 'Через полчаса', @movie, 30.minutes %>]
+    [<%= link_to_shows_starting_at 'Через час', @movie, 1.hour %>]
+    [<%= link_to_shows_starting_at 'Через полтора часа', @movie, 1.hour + 30.minutes %>]
 <p>
     <% form_tag '' do %>
 
@@ -16,20 +18,15 @@
        <br />
        Только в любимых кинотеатрах:
        <%= check_box_tag :favourite_cinemas, 1 ,params[:favourite_cinemas] %>
-      
+
        <%= submit_tag "Поиск", :name => nil %>
     <% end %>
-
-    [<%= link_to_shows_starting_at 'Через полчаса', @movie, 30.minutes %>]
-    [<%= link_to_shows_starting_at 'Через час', @movie, 1.hour %>]
-    [<%= link_to_shows_starting_at 'Через полтора часа', @movie, 1.hour + 30.minutes %>]
 </p>
 
 <ul>
 <% @shows.each do |show| %>
    <li>
      <span class="show_time"><%= show.time_formatted %></span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
-     <%= add_cinema_to_favourites_link(show.cinema) %>
    </li>
 <% end %>
 </ul>

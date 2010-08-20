@@ -1,6 +1,9 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe User do
+
+  fixtures :cinemas
+
   def new_user(attributes = {})
     attributes[:username] ||= 'foo'
     attributes[:email] ||= 'foo@example.com'
@@ -78,4 +81,15 @@ describe User do
     new_user(:username => 'foobar', :password => 'secret').save!
     User.authenticate('foobar', 'badpassword').should be_nil
   end
+
+  it "should look for cinemas in its favourites" do
+    user = new_user
+    user.cinemas << cinemas(:october)
+    user.save!
+
+    user.has_cinema_in_favourites(cinemas(:october)).should be_true
+    user.has_cinema_in_favourites(cinemas(:horizon)).should be_false
+  end
+
+
 end

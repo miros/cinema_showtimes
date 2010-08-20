@@ -7,7 +7,7 @@ describe Show do
   end
 
   it "should format showtime correctly" do
-    @show.time_formatted.should == '12:50 (01-01-2010)'
+    @show.time_formatted.should == '12:50'
   end
 
 end
