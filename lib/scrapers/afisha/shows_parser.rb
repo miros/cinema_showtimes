@@ -25,8 +25,10 @@ module Scrapers::Afisha
     private
 
       def parse_movie_block(movie_block)
-        movie_name = movie_block.at_css('.usetags a').content
-        movie = {:name => movie_name}
+        movie_link = movie_block.at_css('.usetags a')
+        movie_name = movie_link.content
+
+        movie = {:name => movie_name, :afisha_link => movie_link[:href]  }
 
         movie_block.css('tr').each do |cinema_block|
           parse_cinema_block(movie, cinema_block)

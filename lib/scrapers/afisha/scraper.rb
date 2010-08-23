@@ -23,7 +23,7 @@ module Scrapers::Afisha
       ]
 
       dates_to_parse.each {|date| scrap_for_date(date)}
-
+      
       @shows
     end
 
