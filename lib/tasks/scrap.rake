@@ -6,10 +6,14 @@ namespace :scrap do
   task :clean => ['db:reset', :all]
 
   task :afisha => :environment do
+
     browser = Browser.new
     scraper = Scrapers::Afisha::Scraper.new(browser, Scrapers::Afisha::ShowsParser.new)
     shows = scraper.scrap
-    ShowsCreator.new.create_shows(shows)
+
+    movie_scraper =  Scrapers::Afisha::MovieScraper.new(browser)
+    ShowsCreator.new(movie_scraper).create_shows(shows)
+
   end
 
 end

@@ -1,0 +1,5 @@
+%ul
+  -@movies.each do |movie|
+    %li
+      %span.movie_name
+        = link_to movie.name, movie_shows_actual_path(movie)

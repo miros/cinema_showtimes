@@ -22,7 +22,13 @@ ActiveRecord::Schema.define(:version => 20100818110254) do
   end
 
   create_table "movies", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.string  "english_name"
+    t.string  "genre"
+    t.string  "country"
+    t.integer "year"
+    t.integer "duration"
+    t.string  "afisha_link"
   end
 
   create_table "shows", :force => true do |t|

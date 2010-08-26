@@ -15,15 +15,16 @@
   <component name="GemRequirementsHolder" version="2">
     <requirement>
       <requirement>
-        <dependency name="mysql" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="haml" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
-      <source from="config/database.yml" />
+      <source manual="true" />
+      <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rack" version="0" bound="GREATER_OR_EQUAL" git="false" />
+        <dependency name="mysql" version="0" bound="GREATER_OR_EQUAL" git="false" />
       </requirement>
-      <source manual="true" />
+      <source from="config/database.yml" />
     </requirement>
     <requirement>
       <requirement>
@@ -33,27 +34,9 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rspec" version="0" bound="GREATER_OR_EQUAL" git="false" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="rspec-rails" version="0" bound="GREATER_OR_EQUAL" git="false" />
-      </requirement>
-      <source manual="true" />
-    </requirement>
-    <requirement>
-      <requirement>
         <dependency name="test-unit" version="1.2.3" bound="EQUAL" git="false" />
       </requirement>
       <source from="lib/tasks/rspec.rake" />
-    </requirement>
-    <requirement>
-      <requirement>
-        <dependency name="test-unit" version="0" bound="GREATER_OR_EQUAL" git="false" />
-      </requirement>
-      <source manual="true" />
     </requirement>
   </component>
   <component name="NewModuleRootManager">
@@ -76,6 +59,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] hoe (v2.6.1, /usr/lib/ruby/gems/1.8/gems/hoe-2.6.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] test-unit (v1.2.3, /usr/lib/ruby/gems/1.8/gems/test-unit-1.2.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.4.3.1, /usr/lib/ruby/gems/1.8/gems/nokogiri-1.4.3.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.0.17, /usr/lib/ruby/gems/1.8/gems/haml-3.0.17)" level="application" />
   </component>
 </module>
 
