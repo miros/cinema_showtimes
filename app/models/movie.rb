@@ -2,7 +2,8 @@ class Movie < ActiveRecord::Base
 
   has_many :shows
 
-  named_scope :all_by_popularity, :joins => :shows, :group => 'movies.id, movies.name', :order => 'count(shows.id) desc'
+  named_scope :all_by_popularity, :joins => :shows, :group => 'movies.id, movies.name,
+    movies.english_name, movies.genre, movies.country, movies.year, movies.duration, movies.afisha_link', :order => 'count(shows.id) desc'
 
   def search(params, user = nil)
 
@@ -10,7 +11,7 @@ class Movie < ActiveRecord::Base
     found_shows = found_shows.actual if params[:actual]
 
     found_shows = found_shows.in_favourite_cinemas(user) if (params[:favourite_cinemas] && user)
-
+    
     date_for_shows = date_param_to_date_object(params[:date])
 
     found_shows = found_shows.for_date(date_for_shows)
