@@ -9,7 +9,7 @@ class Show < ActiveRecord::Base
 
   named_scope :ordered_by_date, :order => 'time ASC'
   named_scope :with_cinemas, :include => :cinema
-  named_scope :actual, lambda { { :conditions => ['time > ?', Time.zone.now] } }
+  named_scope :actual, lambda { { :conditions => ['time > ?', Time.now] } }
 
 
   named_scope :in_interval, (lambda do |from, to|
