@@ -5,7 +5,7 @@ class Movie < ActiveRecord::Base
   named_scope :all_by_popularity, :joins => :shows, :group => 'movies.id, movies.name,
     movies.english_name, movies.genre, movies.country, movies.year, movies.duration, movies.afisha_link', :order => 'count(shows.id) desc'
 
-  def search(params, user = nil)
+  def search(params = {}, user = nil)
 
     found_shows = shows.ordered_by_date
     found_shows = found_shows.actual if params[:actual]
@@ -27,7 +27,7 @@ class Movie < ActiveRecord::Base
       found_shows = found_shows.in_interval(from, to)
     end
 
-    found_shows
+    found_shows.with_cinemas
   end
 
   private

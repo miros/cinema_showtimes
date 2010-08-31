@@ -7,7 +7,8 @@ describe Movie, 'Search' do
 
     @shows_scope = mock('shows scope')
     @shows_scope.stub(:for_date).and_return(@shows_scope)
-    
+    @shows_scope.stub(:with_cinemas).and_return(@shows_scope)
+
     @movie.stub_chain(:shows, :ordered_by_date).and_return(@shows_scope)
 
     @time_now = Time.now
@@ -17,6 +18,11 @@ describe Movie, 'Search' do
 
     @user = mock_model(User)
 
+  end
+
+  it "should include cinemas for shows" do
+    @shows_scope.should_receive(:with_cinemas).and_return(@shows_scope)
+    @movie.search
   end
 
   it "should search actual shows" do
