@@ -92,3 +92,19 @@ a {
 .show_time {
     font-weight: bold;
 }
+
+.hidden {
+   visibility: hidden;
+}
+
+ul.shows {
+   list-style: none;
+   margin-left: 0;
+   padding-left: 0;
+}
+
+ul.shows li {
+   margin-left: 0;
+   padding-left: 0;
+}
+

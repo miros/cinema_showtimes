@@ -7,9 +7,8 @@
     <list default="true" readonly="true" id="d4561840-67ae-45c6-9bf8-3ab0cc92afa0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/movie_spec.rb" afterPath="$PROJECT_DIR$/spec/models/movie_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/show.rb" afterPath="$PROJECT_DIR$/app/models/show.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/show.html.erb" afterPath="$PROJECT_DIR$/app/views/movies/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/application.css" afterPath="$PROJECT_DIR$/public/stylesheets/application.css" />
     </list>
     <ignored path="cinema_showtimes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +31,26 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/movies/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="16" selection-start="1567" selection-end="1567" vertical-scroll-proportion="-11.153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/application.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="107" column="3" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.8027682">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -50,7 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/cinemas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/cinemas/show.html.erb" />
         <option value="$PROJECT_DIR$/spec/controllers/cinemas_controller_spec.rb" />
@@ -60,12 +77,13 @@
         <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/movies_helper.rb" />
         <option value="$PROJECT_DIR$/spec/controllers/movies_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/app/views/movies/show.html.erb" />
         <option value="$PROJECT_DIR$/public/javascripts/movies.show.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/models/show.rb" />
         <option value="$PROJECT_DIR$/app/models/movie.rb" />
         <option value="$PROJECT_DIR$/spec/models/movie_spec.rb" />
+        <option value="$PROJECT_DIR$/app/views/movies/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/movies/show.html.erb" />
+        <option value="$PROJECT_DIR$/public/stylesheets/application.css" />
       </list>
     </option>
   </component>
@@ -292,7 +310,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="cinemas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -659,7 +677,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="true" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="5" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="little query optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="interface changed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -695,25 +713,12 @@
     <MESSAGE value="interface updated" />
     <MESSAGE value="button to hide end time of shows" />
     <MESSAGE value="little query optimization" />
+    <MESSAGE value="interface changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/controllers/cinemas_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="20" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="16" selection-start="55" selection-end="55" vertical-scroll-proportion="0.08201439">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/cinemas_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="49" selection-end="49" vertical-scroll-proportion="0.05467626">
@@ -742,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cinemas/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="24" selection-start="149" selection-end="149" vertical-scroll-proportion="0.16323024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -770,30 +768,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="39" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.07958478">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="89" selection-start="1663" selection-end="1676" vertical-scroll-proportion="0.75232774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/show.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="46" selection-start="296" selection-end="296" vertical-scroll-proportion="0.3615917">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/movie_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="360" selection-end="360" vertical-scroll-proportion="0.3463588">
           <folding />
         </state>
       </provider>
@@ -808,6 +785,48 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="19" selection-start="414" selection-end="414" vertical-scroll-proportion="0.30968857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/movie_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="34" selection-start="360" selection-end="360" vertical-scroll-proportion="0.03374778">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cinemas/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="24" selection-start="149" selection-end="149" vertical-scroll-proportion="0.16435987">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cinemas/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="16" selection-start="55" selection-end="55" vertical-scroll-proportion="0.08201439">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="16" selection-start="1567" selection-end="1567" vertical-scroll-proportion="-11.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="3" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.8027682">
           <folding />
         </state>
       </provider>

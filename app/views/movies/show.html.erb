@@ -1,3 +1,4 @@
+:erb
 <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
 <%= javascript_include_tag 'movies.show' %>
 
@@ -37,10 +38,11 @@
 
 <input type="button" id="show_end_time_toggle" value="Показывать конец">
 
-<ul>
-<% @shows.each do |show| %>
-   <li>
-     <span class="show_time"><%= show.time_formatted %></span> <span class="show_end_time">(<%= show.end_time_formatted %>)</span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
-   </li>
-<% end %>
+<ul class="shows">
+    <% @shows.each do |show| %>
+       <li>
+         <span class="show_time <%= (@previous_show && @previous_show.time == show.time) ? 'hidden' : '' %>"><%= show.time_formatted %></span> <span class="show_end_time">(<%= show.end_time_formatted %>)</span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
+       </li>
+       <% @previous_show = show %>
+    <% end %>
 </ul>
