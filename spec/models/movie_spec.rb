@@ -11,6 +11,7 @@ describe Movie, 'Search' do
     @shows_scope.stub(:for_date).and_return(@shows_scope)
     @shows_scope.stub(:actual).and_return(@shows_scope)
     @shows_scope.stub(:with_cinemas).and_return(@shows_scope)
+    @shows_scope.stub(:with_movies).and_return(@shows_scope)
 
     @movie.stub_chain(:shows, :ordered_by_date).and_return(@shows_scope)
 

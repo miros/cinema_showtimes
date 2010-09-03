@@ -27,7 +27,7 @@ class Movie < ActiveRecord::Base
       found_shows = found_shows.in_interval(from, to)
     end
 
-    found_shows.with_cinemas
+    found_shows.with_cinemas.with_movies
   end
 
   private

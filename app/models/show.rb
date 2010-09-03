@@ -9,6 +9,7 @@ class Show < ActiveRecord::Base
 
   named_scope :ordered_by_date, :order => 'time ASC'
   named_scope :with_cinemas, :include => :cinema
+  named_scope :with_movies, :include => :movie
   named_scope :actual, lambda { { :conditions => ['time > ?', Time.now] } }
 
 
