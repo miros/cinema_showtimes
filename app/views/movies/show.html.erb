@@ -38,16 +38,18 @@
 
 <input type="button" id="show_end_time_toggle" value="Показывать конец">
 
-<div id="shows">
-    <% @shows.each.group_by(&:time_formatted).each do |time, shows| %>
-        <span class="show_time"><%= time%></span><span class="show_end_time">(<%= shows.first.end_time_formatted %>)</span>
+<div id="shows_list">
+  <% @shows.each.group_by(&:time_formatted).each do |time, shows| %>
+      <span class="show_time"><%= time%></span><span class="show_end_time">(<%= shows.first.end_time_formatted %>)</span>
+      <ul class="shows">
         <% shows.each do |show| %>
-            <ul class="shows">
-              <li>
-                 <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
-              </li>
-            </ul>
+
+            <li>
+              <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
+            </li>
+
             <% @previous_show = show %>
         <% end %>
-    <% end %>
+      </ul>
+  <% end %>
 </div>

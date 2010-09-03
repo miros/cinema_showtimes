@@ -98,14 +98,20 @@ a {
 }
 
 ul.shows {
-
+   margin-left: 30px;
+   padding-left: 0;
+   margin-top: 5px;
+   margin-bottom: 5px; 
 }
 
 ul.shows li {
-
+   margin: 0;
+   padding: 0;
 }
 
-#shows {
-    margin-top: 10px;
+#shows_list {
+   margin-top: 10px;
 }
+
+
 
