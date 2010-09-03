@@ -2,21 +2,20 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <title><%= h(yield(:title) || "Films") %></title>
     <%= stylesheet_link_tag 'application' %>
     <%= yield(:head) %>
   </head>
   <body>
 
-    <div id="login_information">
-    <% if logged_in? %>
-        Welcome <%=h current_user.username %>!
-        <%= link_to "Любимые кинотеатры", favourite_cinemas_path %>
-        <%= link_to "Log out", logout_path %>
-    <% else %>
-        <%= link_to "Sign up", signup_path %> or
-        <%= link_to "log in", login_path %>.
-    <% end %>
+    <div id="userMenu">
+        <% if logged_in? %>
+            [<%= link_to "Любимые кинотеатры", favourite_cinemas_path %>]
+            [<%= link_to "Log out", logout_path %>]
+        <% else %>
+            [<%= link_to "Log in", login_path %>]
+            [<%= link_to "Sign Up", signup_path %>]
+        <% end %>
     </div>
 
     <div id="container">

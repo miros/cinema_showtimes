@@ -39285,3 +39285,449 @@ Rendering template within layouts/application
 Rendering cinemas/show
 Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/cinemas/1]
   [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMovie Columns (35.2ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFavouriteCinema Columns (8.8ms)[0m   [0;1mSHOW FIELDS FROM `favourite_cinemas`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mFavouriteCinema Create (75.4ms)[0m   [0;1mINSERT INTO `favourite_cinemas` (`user_id`, `cinema_id`) VALUES(NULL, NULL)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (24.5ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (34.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.3ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.3ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Delete all (1.1ms)[0m   [0mDELETE FROM `users` [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@bar@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.3ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'bar@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (20.3ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password_salt`, `password_hash`, `email`) VALUES('2010-09-03 10:20:36', '2010-09-03 10:20:36', 'foo', '772da1f23bde4e72a69f4eff37201306854b40af', 'b8273c42b8622309f37602062014da1a3bed979c', 'bar@example.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'bar@example.com') LIMIT 1[0m
+  [4;36;1mSQL (17.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'uniquename') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password_salt`, `password_hash`, `email`) VALUES('2010-09-03 10:20:36', '2010-09-03 10:20:36', 'uniquename', '8b925e1ecf26552f140ad93f2bfc352ae4ec4234', '3d3a8cf4f58210c35cb9ee3fbbb54641942e08a2', 'foo@example.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'uniquename') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.3ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'odd ^&(@)') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Delete all (36.6ms)[0m   [0mDELETE FROM `users` [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.7ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password_salt`, `password_hash`, `email`) VALUES('2010-09-03 10:20:37', '2010-09-03 10:20:37', 'foo', '04c724b4528f845a1869039a7be6c6eaa5d2b1a8', '66471cb9884f28b01f01bdbd4c2da9b616401149', 'foo@example.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (2.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foobar') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password_salt`, `password_hash`, `email`) VALUES('2010-09-03 10:20:37', '2010-09-03 10:20:37', 'foobar', 'abb4aadd61aaf367a27a392e2765e65299cc11b7', 'd056576eff23af8bfb94f9ba73e2d5848e800f2e', 'foo@example.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'foobar') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.2ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@bar.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password_salt`, `password_hash`, `email`) VALUES('2010-09-03 10:20:37', '2010-09-03 10:20:37', 'foo', '41b8d3802a85412def43c3504015243bd54941cb', 'a6679a813b183787860fa48996098b5ef6163ab5', 'foo@bar.com')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`username` = 'foo@bar.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'foo@bar.com') LIMIT 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.7ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mUser Load (4.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'nonexisting') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'nonexisting') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM `users` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foobar') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password_salt`, `password_hash`, `email`) VALUES('2010-09-03 10:20:37', '2010-09-03 10:20:37', 'foobar', '08472c9a43f31c41322f055e2743b1a289945a51', '74b29516eb61a9d76bab701a4805adf0819eeff3', 'foo@example.com')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`username` = 'foobar') LIMIT 1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Delete all (0.3ms)[0m   [0;1mDELETE FROM `users` [0m
+  [4;35;1mCinema Load (0.4ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 741846883) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`username` = BINARY 'foo') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'foo@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`created_at`, `updated_at`, `username`, `password_salt`, `password_hash`, `email`) VALUES('2010-09-03 10:20:37', '2010-09-03 10:20:37', 'foo', '4efc3b98980855b19ee34b086dff84f293512668', 'a99ff344baad995b5f8a426fff347874f04ead56', 'foo@example.com')[0m
+  [4;36;1mFavouriteCinema Create (0.2ms)[0m   [0;1mINSERT INTO `favourite_cinemas` (`user_id`, `cinema_id`) VALUES(922717362, 741846883)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mCinema Load (0.4ms)[0m   [0;1mSELECT `cinemas`.* FROM `cinemas` INNER JOIN `favourite_cinemas` ON `cinemas`.id = `favourite_cinemas`.cinema_id WHERE (`cinemas`.`id` = 741846883) AND ((`favourite_cinemas`.user_id = 922717362)) [0m
+  [4;35;1mCinema Load (0.2ms)[0m   [0mSELECT * FROM `cinemas` WHERE (`cinemas`.`id` = 144883172) [0m
+  [4;36;1mCinema Load (0.3ms)[0m   [0;1mSELECT `cinemas`.* FROM `cinemas` INNER JOIN `favourite_cinemas` ON `cinemas`.id = `favourite_cinemas`.cinema_id WHERE (`cinemas`.`id` = 144883172) AND ((`favourite_cinemas`.user_id = 922717362)) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mShow Columns (41.2ms)[0m   [0mSHOW FIELDS FROM `shows`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#new (for 0.0.0.0 at 2010-09-03 14:20:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 37ms (View: 33, DB: 406) | 200 OK [http://test.host/signup]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-09-03 14:20:38) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-09-03 14:20:38) [POST]
+  Parameters: {"action"=>"create", "controller"=>"users"}
+Redirected to http://test.host/
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2010-09-03 14:20:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 10ms (View: 5, DB: 10) | 200 OK [http://test.host/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2010-09-03 14:20:38) [POST]
+  Parameters: {"action"=>"create", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/sessions]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2010-09-03 14:20:38) [POST]
+  Parameters: {"action"=>"create", "controller"=>"sessions"}
+Redirected to http://test.host/
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/sessions]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing SessionsController#destroy (for 0.0.0.0 at 2010-09-03 14:20:38) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://test.host/
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/logout]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MoviesController#index (for 0.0.0.0 at 2010-09-03 14:20:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://test.host/movies]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MoviesController#index (for 0.0.0.0 at 2010-09-03 14:20:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"movies"}
+Rendering template within layouts/application
+Rendering movies/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/movies]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MoviesController#show (for 0.0.0.0 at 2010-09-03 14:20:38) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"movies"}
+Rendering template within layouts/application
+Rendering movies/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://test.host/movies/1]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MoviesController#show (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"movies"}
+Rendering template within layouts/application
+Rendering movies/show
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/movies/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MoviesController#show (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"movies"}
+Rendering template within layouts/application
+Rendering movies/show
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://test.host/movies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MoviesController#show (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"movies"}
+Rendering template within layouts/application
+Rendering movies/show
+Completed in 12ms (View: 12, DB: 0) | 200 OK [http://test.host/movies/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#index (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"favourite_cinemas"}
+Rendering template within layouts/application
+Rendering favourite_cinemas/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://test.host/favourite_cinemas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#index (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"favourite_cinemas"}
+Rendering template within layouts/application
+Rendering favourite_cinemas/index
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/favourite_cinemas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#create (for 0.0.0.0 at 2010-09-03 14:20:39) [POST]
+  Parameters: {"action"=>"create", "controller"=>"favourite_cinemas"}
+Redirected to http://test.host/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#create (for 0.0.0.0 at 2010-09-03 14:20:39) [POST]
+  Parameters: {"action"=>"create", "controller"=>"favourite_cinemas", "cinema_id"=>"1"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas?cinema_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#create (for 0.0.0.0 at 2010-09-03 14:20:39) [POST]
+  Parameters: {"action"=>"create", "controller"=>"favourite_cinemas", "cinema_id"=>"1"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas?cinema_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#create (for 0.0.0.0 at 2010-09-03 14:20:39) [POST]
+  Parameters: {"action"=>"create", "controller"=>"favourite_cinemas", "cinema_id"=>"1"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas?cinema_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#create (for 0.0.0.0 at 2010-09-03 14:20:39) [POST]
+  Parameters: {"action"=>"create", "controller"=>"favourite_cinemas", "cinema_id"=>"1"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas?cinema_id=1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#create (for 0.0.0.0 at 2010-09-03 14:20:39) [POST]
+  Parameters: {"action"=>"create", "controller"=>"favourite_cinemas", "cinema_id"=>"1"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas?cinema_id=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#create (for 0.0.0.0 at 2010-09-03 14:20:39) [POST]
+  Parameters: {"action"=>"create", "controller"=>"favourite_cinemas", "cinema_id"=>"wrong_id"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 8ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas?cinema_id=wrong_id]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#destroy (for 0.0.0.0 at 2010-09-03 14:20:39) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"37", "controller"=>"favourite_cinemas"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas/37]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FavouriteCinemasController#destroy (for 0.0.0.0 at 2010-09-03 14:20:39) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"favourite_cinemas"}
+Redirected to http://test.host/favourite_cinemas
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/favourite_cinemas/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CinemasController#index (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cinemas"}
+Rendering template within layouts/application
+Rendering cinemas/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://test.host/cinemas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CinemasController#index (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"cinemas"}
+Rendering template within layouts/application
+Rendering cinemas/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/cinemas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CinemasController#show (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cinemas"}
+Rendering template within layouts/application
+Rendering cinemas/show
+Completed in 5ms (View: 5, DB: 0) | 200 OK [http://test.host/cinemas/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CinemasController#show (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cinemas"}
+Rendering template within layouts/application
+Rendering cinemas/show
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/cinemas/1]
+  [4;36;1mSQL (4.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CinemasController#show (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cinemas"}
+Rendering template within layouts/application
+Rendering cinemas/show
+Completed in 4ms (View: 4, DB: 5) | 200 OK [http://test.host/cinemas/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CinemasController#show (for 0.0.0.0 at 2010-09-03 14:20:39) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cinemas"}
+Rendering template within layouts/application
+Rendering cinemas/show
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/cinemas/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m

@@ -16,7 +16,7 @@ namespace :scrap do
 
   end
 
-  task :reset_shows do
+  task :reset_shows => :environment do
     Movie.delete_all
     Show.delete_all
   end
