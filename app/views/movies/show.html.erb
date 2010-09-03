@@ -17,11 +17,14 @@
        -
        <%= text_field_tag :to, params[:to] || Time.now.end_of_day.strftime('%H:%M'), :size => 5 %>
 
-       <br /><br />
-      <%= check_box_tag :favourite_cinemas, 1 , params[:favourite_cinemas], :id => "in_favourite_cinemas" %> 
-      <label for="in_favourite_cinemas">Только в любимых кинотеатрах:</label>
+      <br /><br />
+      <% if logged_in? %>
+        <%= check_box_tag :favourite_cinemas, 1 , params[:favourite_cinemas], :id => "in_favourite_cinemas" %>
+        <label for="in_favourite_cinemas">Только в любимых кинотеатрах:</label>
+        <br /><br />
+      <% end %>
 
-       <br /><br />
+
        <%= submit_tag "Поиск", :name => nil %>
     <% end %>
 </p>
