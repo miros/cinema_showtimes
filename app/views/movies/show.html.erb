@@ -1,3 +1,6 @@
+<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+<%= javascript_include_tag 'movies.show' %>
+
 <h1 class="movie_name"><%= @movie.name %></h1>
 
 [<%= link_to_if(!(@date.today?), 'Сегодня', movie_shows_path(@movie, :date => 'today')) %>]
@@ -20,19 +23,25 @@
       <br /><br />
       <% if logged_in? %>
         <%= check_box_tag :favourite_cinemas, 1 , params[:favourite_cinemas], :id => "in_favourite_cinemas" %>
-        <label for="in_favourite_cinemas">Только в любимых кинотеатрах:</label>
+        <label for="in_favourite_cinemas">Только в любимых кинотеатрах</label>
+
+        <br />
+        <input type="button" id="favourite_cinemas_toggle" value="Только в любимых кинотеатрах">
+
+
         <br /><br />
       <% end %>
 
 
-       <%= submit_tag "Поиск", :name => nil %>
+
+      <%= submit_tag "Поиск", :name => nil %>
     <% end %>
 </p>
 
 <ul>
 <% @shows.each do |show| %>
    <li>
-     <span class="show_time"><%= show.time_formatted %></span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
+     <span class="show_time"><%= show.time_formatted %></span> <span class="show_end_time">(<%= show.end_time_formatted %>)</span> <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
    </li>
 <% end %>
 </ul>

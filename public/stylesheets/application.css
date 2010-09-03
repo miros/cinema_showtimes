@@ -83,3 +83,11 @@ a {
 #userMenu, #userMenu a {
   color: white;
 }
+
+.show_end_time {
+    font-size: 10px;
+}
+
+.show_time {
+    font-weight: bold;
+}

@@ -28,6 +28,9 @@ class Show < ActiveRecord::Base
     self.time.strftime('%H:%M')
   end
 
+  def end_time_formatted
+    (self.time + self.movie.duration.minutes).strftime('%H:%M') if self.movie.duration
+  end
 
 
 end
