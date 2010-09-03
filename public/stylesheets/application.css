@@ -98,13 +98,14 @@ a {
 }
 
 ul.shows {
-   list-style: none;
-   margin-left: 0;
-   padding-left: 0;
+
 }
 
 ul.shows li {
-   margin-left: 0;
-   padding-left: 0;
+
+}
+
+#shows {
+    margin-top: 10px;
 }
 
