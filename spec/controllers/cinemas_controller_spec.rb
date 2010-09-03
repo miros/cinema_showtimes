@@ -32,9 +32,9 @@ describe CinemasController do
       @cinema = mock_model(Cinema, :id => 1, :name => 'test_cinema_name', :city => 'москва')
       @movie = mock_model(Movie, :name => 'test_movie_name')
       @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :movie => @movie)
-      @show.should_receive(:time_formatted).at_least(:once).and_return('12:50 (01-01-2010)')
+      @show.should_receive(:time_formatted).at_least(:once).and_return('12:50')
       
-      @cinema.should_receive(:shows).at_least(:once).and_return([@show, @show, @show])
+      @cinema.stub_chain(:shows, :all).and_return([@show, @show, @show])
       Cinema.should_receive(:find).with('1').and_return(@cinema)
 
       get_cinemas_show
@@ -48,12 +48,16 @@ describe CinemasController do
       response.should have_tag('h1', /#{@cinema.name}/)
     end
 
+    it "should display date correctly" do
+      response.should have_tag('h4.date', '2010-01-01')
+    end
+
     it "should display show time correctly" do
-      response.should have_tag('span.show_time', '12:50 (01-01-2010)')
+      response.should have_tag('span.show_time', '12:50')
     end
 
     it "should display all shows" do
-      assigns[:cinema].should have(3).shows
+      assigns[:shows].should have(3).shows
     end
 
   end

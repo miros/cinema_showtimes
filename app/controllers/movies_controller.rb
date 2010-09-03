@@ -15,7 +15,8 @@ class MoviesController < ApplicationController
 
   def show
 
-    @shows = @movie.search(params, current_user)
+    @date = (params[:date] == 'today') ? Date.today : params[:date].to_date
+    @shows = @movie.search(params.merge(:date => @date), current_user)
 
     respond_to do |format|
       format.html

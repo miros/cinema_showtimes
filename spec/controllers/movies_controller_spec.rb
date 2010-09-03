@@ -34,23 +34,38 @@ describe MoviesController do
       @movie.stub(:shows).and_return(@shows = [@show.clone, @show.clone, @show.clone])
       @movie.should_receive(:search).and_return(@shows)
 
-      get 'show', {:id => '1'}
+
     end
 
-    it "should be success" do
+    # !TODO REFACTOR THIS!
+
+    it "should show movie shows for today" do
+      get 'show', {:id => '1', :date => 'today'}
+      response.should be_success
+    end
+
+    it "should show movie shows for date" do
+      get_for_date Date.today.to_s
       response.should be_success
     end
 
     it "should show movie name" do
+      get_for_date
       response.should have_tag('h1.movie_name', @movie.name)
     end
 
     it "should display show time" do
+      get_for_date
       response.should have_tag('span.show_time', '12:50 (01-01-2010)')
     end
 
     it "should display all shows" do
+      get_for_date
       assigns[:movie].should have(3).shows
+    end
+
+    def get_for_date(date = 'today')
+      get 'show', {:id => '1', :date => date}
     end
 
   end

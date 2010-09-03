@@ -9,8 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
 
   map.resources :movies, :only => [:index]
-  map.movie_shows_actual 'movies/:id/actual', :controller => :movies, :action => :show, :actual => true, :date => 'today'
-  map.movie_shows_by_date 'movies/:id/:date', :controller => :movies, :action => :show, :date => 'today'
+  map.movie_shows 'movies/:id/:date', :controller => :movies, :action => :show, :date => 'today'
   map.resources :movies, :only => [:show]
   map.resources :cinemas
 

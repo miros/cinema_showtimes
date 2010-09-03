@@ -8,11 +8,11 @@ class Movie < ActiveRecord::Base
   def search(params = {}, user = nil)
 
     found_shows = shows.ordered_by_date
-    found_shows = found_shows.actual if params[:actual]
+    found_shows = found_shows.actual if params[:date].today?
 
     found_shows = found_shows.in_favourite_cinemas(user) if (params[:favourite_cinemas] && user)
     
-    date_for_shows = date_param_to_date_object(params[:date])
+    date_for_shows = params[:date]
 
     found_shows = found_shows.for_date(date_for_shows)
 
@@ -31,17 +31,6 @@ class Movie < ActiveRecord::Base
   end
 
   private
-
-    def date_param_to_date_object(date_param)
-      case date_param
-        when nil, 'today'
-          Date.today
-        when 'tomorrow'
-          Date.tomorrow
-        else
-          Date.parse(date_param)
-      end
-    end
 
     def parse_time_param(param)
       return false if (!param || param.blank?)

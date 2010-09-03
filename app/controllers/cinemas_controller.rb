@@ -2,6 +2,7 @@
 class CinemasController < ApplicationController
   def show
     @cinema = Cinema.find(params[:id])
+    @shows = @cinema.shows.all(:include => :movie)
 
     respond_to do |format|
       format.html

@@ -1,0 +1,14 @@
+%h1
+  = @cinema.name
+  %span.city= @cinema.city
+
+-@shows.group_by {|show| show.time.to_date }.each do |date, shows_for_date|
+  %h4.date= (date.today?) ? 'Сегодня' : date
+  %ul
+    -shows_for_date.each do |show|
+      %li
+        %span.show_time= show.time_formatted
+        %span.movie_name= link_to show.movie.name, movie_path(show.movie)
+
+
+

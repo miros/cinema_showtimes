@@ -1,24 +1,27 @@
 <h1 class="movie_name"><%= @movie.name %></h1>
 
-[<%= link_to_if !params[:actual], 'Сегодня', movie_shows_actual_path(@movie) %>]
-[<%= link_to_if params[:date] != 'tomorrow', 'Завтра', movie_shows_by_date_path(@movie, :date => 'tomorrow') %>]
-[<%= link_to_if params[:date] != Date.tomorrow.tomorrow.to_s, 'Послезавтра', movie_shows_by_date_path(@movie, :date => Date.tomorrow.tomorrow) %>]
+[<%= link_to_if(!(@date.today?), 'Сегодня', movie_shows_path(@movie, :date => 'today')) %>]
+<br />
+[<%= link_to_if(!(@date == Date.tomorrow), 'Завтра', movie_shows_path(@movie, :date => Date.tomorrow)) %>]
+<br />
+[<%= link_to_if(!(@date == Date.tomorrow.tomorrow), 'Послезавтра', movie_shows_path(@movie, :date => Date.tomorrow.tomorrow)) %>]
 
 <h4>Время начала сеанса:</h4>
-    [<%= link_to_shows_starting_at 'Через полчаса', @movie, 30.minutes %>]
-    [<%= link_to_shows_starting_at 'Через час', @movie, 1.hour %>]
-    [<%= link_to_shows_starting_at 'Через полтора часа', @movie, 1.hour + 30.minutes %>]
+    <%= link_to_shows_starting_at 'Через полчаса', @movie, 30.minutes %>
+    <%= link_to_shows_starting_at 'Через час', @movie, 1.hour %>
+    <%= link_to_shows_starting_at 'Через полтора часа', @movie, 1.hour + 30.minutes %>
 <p>
     <% form_tag '' do %>
 
-       <%= text_field_tag :from, params[:from] || Time.now.strftime('%H:%M') %>
+       <%= text_field_tag :from, params[:from] || Time.now.strftime('%H:%M'), :size => 5 %>
        -
-       <%= text_field_tag :to, params[:to] || Time.now.end_of_day.strftime('%H:%M') %>
+       <%= text_field_tag :to, params[:to] || Time.now.end_of_day.strftime('%H:%M'), :size => 5 %>
 
-       <br />
-       <label for="in_favourite_cinemas">Только в любимых кинотеатрах:</label>
-       <%= check_box_tag :favourite_cinemas, 1 , params[:favourite_cinemas], :id => "in_favourite_cinemas" %>
+       <br /><br />
+      <%= check_box_tag :favourite_cinemas, 1 , params[:favourite_cinemas], :id => "in_favourite_cinemas" %> 
+      <label for="in_favourite_cinemas">Только в любимых кинотеатрах:</label>
 
+       <br /><br />
        <%= submit_tag "Поиск", :name => nil %>
     <% end %>
 </p>
