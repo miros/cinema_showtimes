@@ -29,7 +29,7 @@ describe MoviesController do
       Movie.should_receive(:find).and_return(@movie)
 
       @cinema = mock_model(Cinema, :name => 'test_cinema_name')
-      @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :cinema => @cinema, :time_formatted => '12:50 (01-01-2010)')
+      @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :cinema => @cinema, :time_formatted => '12:50 (01-01-2010)', :null_object => true)
 
       @movie.stub(:shows).and_return(@shows = [@show.clone, @show.clone, @show.clone])
       @movie.should_receive(:search).and_return(@shows)

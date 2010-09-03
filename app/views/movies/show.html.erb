@@ -28,15 +28,14 @@
         <br />
         <input type="button" id="favourite_cinemas_toggle" value="Только в любимых кинотеатрах">
 
-
         <br /><br />
       <% end %>
-
-
 
       <%= submit_tag "Поиск", :name => nil %>
     <% end %>
 </p>
+
+<input type="button" id="show_end_time_toggle" value="Показывать конец">
 
 <ul>
 <% @shows.each do |show| %>

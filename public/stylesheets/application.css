@@ -86,6 +86,7 @@ a {
 
 .show_end_time {
     font-size: 10px;
+    display: none;
 }
 
 .show_time {

@@ -8,6 +8,10 @@ $(function(){
         } else {
             checkbox.attr('checked', 'checked');
         }
-    })
+    });
+
+    $('#show_end_time_toggle').click(function() {
+       $('.show_end_time').toggle(); 
+    });
 
 });
