@@ -7,7 +7,7 @@ describe MoviesController do
   describe "get /movies/" do
 
     before(:each) do
-      @movie = mock_model(Movie, :id => 1, :name => 'test_movie')
+      @movie = mock_model(Movie, :id => 1, :name => 'test_movie', :null_object => true)
     end
 
     describe "order by name" do
@@ -38,7 +38,7 @@ describe MoviesController do
   describe "get /movies/:id" do
 
     before(:each) do
-      @movie = mock_model(Movie, :name => 'test_movie')
+      @movie = mock_model(Movie, :name => 'test_movie', :null_object => true)
       Movie.should_receive(:find).and_return(@movie)
 
       @cinema = mock_model(Cinema, :name => 'test_cinema_name')

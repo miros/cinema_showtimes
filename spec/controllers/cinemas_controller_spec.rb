@@ -49,7 +49,7 @@ describe CinemasController do
     end
 
     it "should display date correctly" do
-      response.should have_tag('h4.date', '2010-01-01')
+      response.should have_tag('h3.date', '2010-01-01')
     end
 
     it "should display show time correctly" do

@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+=begin
 describe MovieVisitsController do
 
   def mock_movie_visit(stubs={})
@@ -129,3 +130,4 @@ describe MovieVisitsController do
   end
 
 end
+=end
