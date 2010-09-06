@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Show do
 
   before(:each) do
-    @show = Show.new(:time => DateTime.new(2010, 01, 01, 12, 50))
+    @show = Show.new(:time => Time.local(2010, 01, 01, 12, 50))
   end
 
   it "should format showtime correctly" do

@@ -15,8 +15,12 @@ describe Movie, 'Search' do
 
     @movie.stub_chain(:shows, :ordered_by_date).and_return(@shows_scope)
 
-    @time_now = Time.now.utc
-    Time.stub!(:now).and_return(@time_now)
+    @time_now = Time.zone.now
+
+    @zone = Time.zone
+    @zone.stub!(:now).and_return(@time_now)
+    Time.stub!(:zone).and_return(@zone)
+
     Date.stub!(:today).and_return(@time_now.to_date)
     Date.stub!(:tomorrow).and_return(@time_now.to_date.tomorrow)
 
@@ -60,7 +64,7 @@ describe Movie, 'Search' do
   end
 
   it "should accept poorly formatted time" do
-   @shows_scope.should_receive(:in_interval).with(Time.parse('16:00'), Time.parse('18:00')).and_return(@shows_scope)
+   @shows_scope.should_receive(:in_interval).with(Time.zone.parse('16:00'), Time.zone.parse('18:00')).and_return(@shows_scope)
    @movie.search(:date => Date.today, :from => '16', :to => '18')
   end
   
@@ -71,8 +75,8 @@ describe Movie, 'Search' do
   end
 
   def check_time_limits(params, date = nil)
-    from = (params[:from]) ? Time.parse(params[:from]) : Time.now
-    to = (params[:to]) ? Time.parse(params[:to]) : Time.now.end_of_day
+    from = (params[:from]) ? Time.parse(params[:from]) : Time.zone.now
+    to = (params[:to]) ? Time.parse(params[:to]) : Time.zone.now.end_of_day
 
     if date
       from = date + from.hour.hours + from.min.minutes + from.sec.seconds

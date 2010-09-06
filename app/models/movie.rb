@@ -18,8 +18,8 @@ class Movie < ActiveRecord::Base
 
     if (params[:from] or params[:to])
 
-      from = parse_time_param(params[:from]) || Time.now
-      to = parse_time_param(params[:to]) || Time.now.end_of_day
+      from = parse_time_param(params[:from]) || Time.zone.now
+      to = parse_time_param(params[:to]) || Time.zone.now.end_of_day
 
       from = date_for_shows + from.hour.hours + from.min.minutes + from.sec.seconds
       to = date_for_shows + to.hour.hours + to.min.minutes + to.sec.seconds
@@ -35,7 +35,7 @@ class Movie < ActiveRecord::Base
     def parse_time_param(param)
       return false if (!param || param.blank?)
       param = param + ':00' if !param.include?(':')
-      Time.parse(param)
+      Time.zone.parse(param)
     end
 
 end

@@ -41,7 +41,7 @@
   <b>Сейчас: <%= Time.now.strftime('%H:%M') %></b><br/><br />
   <% @shows.each.group_by(&:time_formatted).each do |time, shows| %>
       <span class="show_time"><%= time%></span>
-      <span class="time_left">[-<b><%= ((shows.first.time - Time.utc(Time.now.year, Time.now.month, Time.now.day, Time.now.hour, Time.now.min)) / 60).round %></b> мин.]</span>
+      <span class="time_left">[-<b><%= ((shows.first.time - Time.zone.now) / 60).round %></b> мин.]</span>
       <span class="show_end_time">(<%= shows.first.end_time_formatted %>)</span>
       <ul class="shows">
         <% shows.each do |show| %>

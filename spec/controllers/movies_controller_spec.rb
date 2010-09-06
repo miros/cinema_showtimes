@@ -29,9 +29,9 @@ describe MoviesController do
       Movie.should_receive(:find).and_return(@movie)
 
       @cinema = mock_model(Cinema, :name => 'test_cinema_name')
-      @show = mock_model(Show, :time => DateTime.new(2010, 01, 01, 12, 50), :cinema => @cinema, :time_formatted => '12:50 (01-01-2010)', :null_object => true)
+      @show = mock_model(Show, :time => Time.local(2010, 01, 01, 12, 50), :cinema => @cinema, :time_formatted => '12:50', :null_object => true)
 
-      @movie.stub(:shows).and_return(@shows = [@show.clone, @show.clone, @show.clone])
+      @movie.stub(:search).and_return(@shows = [@show.clone, @show.clone, @show.clone])
       @movie.should_receive(:search).and_return(@shows)
 
 
@@ -54,14 +54,9 @@ describe MoviesController do
       response.should have_tag('h1.movie_name', @movie.name)
     end
 
-    it "should display show time" do
+     it "should display all shows" do
       get_for_date
-      response.should have_tag('span.show_time', '12:50 (01-01-2010)')
-    end
-
-    it "should display all shows" do
-      get_for_date
-      assigns[:movie].should have(3).shows
+      assigns[:shows].should have(3).shows
     end
 
     def get_for_date(date = 'today')
