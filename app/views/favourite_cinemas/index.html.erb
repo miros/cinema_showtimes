@@ -1,12 +1,10 @@
 <h1>Любимые кинотеатры</h1>
 
 <table>
-  <tr>
-  </tr>
-
 <% @favourite_cinemas.each do |favourite_cinema| %>
   <tr>
-    <td><%= favourite_cinema.cinema.name %> <%= link_to 'Удалить', favourite_cinema, :confirm => 'Удалить?', :method => :delete %></td>
+    <td><%= favourite_cinema.cinema.name %></td>
+    <td><%= link_to 'Удалить', favourite_cinema, :confirm => 'Удалить?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

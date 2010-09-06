@@ -4,20 +4,33 @@ describe MoviesController do
 
   integrate_views
 
-  describe "get /movies" do
+  describe "get /movies/" do
 
-    before(:each) do 
+    before(:each) do
       @movie = mock_model(Movie, :id => 1, :name => 'test_movie')
-      Movie.should_receive(:all_by_popularity).and_return([@movie])
-      get 'index'
     end
 
-    it "should be success" do
-      response.should be_success
+    describe "order by name" do
+
+      it "should be success" do
+        Movie.should_receive(:all_by_name).and_return([@movie]) 
+        get :index, :order => 'by_name'
+        puts [@movie]
+        response.should be_success
+        response.should have_tag('span.movie_name', @movie.name)
+      end
+
     end
 
-    it "should show movie names" do
-      response.should have_tag('span.movie_name', @movie.name)
+    describe "order by popularity" do
+
+      it "should be success" do
+        Movie.should_receive(:all_by_popularity).and_return([@movie])
+        get :index, :order => 'by_popularity'
+        response.should be_success
+        response.should have_tag('span.movie_name', @movie.name)
+      end
+
     end
 
   end

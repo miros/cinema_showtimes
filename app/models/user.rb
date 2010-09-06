@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
-  # new columns need to be added here to be writable through mass assignment
 
   has_many :favourite_cinemas
   has_many :cinemas, :through => :favourite_cinemas
+
+  has_many :movie_visits
+  has_many :movies, :through => :movie_visits
 
   attr_accessible :username, :email, :password, :password_confirmation
   

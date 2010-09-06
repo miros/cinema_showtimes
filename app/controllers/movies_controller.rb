@@ -2,7 +2,16 @@ class MoviesController < ApplicationController
 
   def index
 
-    @movies = Movie.all_by_popularity
+    @movies = case params[:order]
+      when 'by_name'
+        Movie.all_by_name
+      when 'by_popularity'
+        Movie.all_by_popularity
+      else
+        Movie.all_by_popularity
+    end
+
+    @movies = @movies.unseen(current_user)
 
     respond_to do |format|
       format.html

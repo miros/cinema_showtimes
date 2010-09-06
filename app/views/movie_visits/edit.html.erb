@@ -1,0 +1,16 @@
+<% form_for(@movie_visit) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :cinema_id, 'Кинотеатр' %><br />
+    <%= f.collection_select(:cinema_id, Cinema.all(:order => 'name'), :id, :name) %>
+  </p>
+  <p>
+    <%= f.label :date, 'Дата' %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.submit 'Сохранить' %>
+  </p>
+<% end %>
+
+<%= link_to 'Назад', movie_visits_path %>

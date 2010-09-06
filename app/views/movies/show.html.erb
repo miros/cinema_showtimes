@@ -2,6 +2,17 @@
 <%= javascript_include_tag 'movies.show' %>
 
 <h1 class="movie_name"><%= @movie.name %></h1>
+<p><%= link_to('Смотрел', new_movie_visit_path(@movie, :movie => @movie.id), :method => :get) %></p>
+
+<p>
+  <%= @movie.genre %>
+  <br />
+  <%= @movie.country %>,
+  <%= @movie.year %>,
+  <%= @movie.duration %> мин.
+</p>
+
+
 
 [<%= link_to_if(!(@date.today?), 'Сегодня', movie_shows_path(@movie, :date => 'today')) %>]
 <br />

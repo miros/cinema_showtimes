@@ -5,6 +5,12 @@ class Movie < ActiveRecord::Base
   named_scope :all_by_popularity, :joins => :shows, :group => 'movies.id, movies.name,
     movies.english_name, movies.genre, movies.country, movies.year, movies.duration, movies.afisha_link', :order => 'count(shows.id) desc'
 
+  named_scope :all_by_name, :order => 'name ASC'
+
+  named_scope :unseen, lambda {|user|
+    {:joins => "LEFT JOIN movie_visits AS visit ON visit.movie_id = movies.id AND user_id = #{user.id}", :conditions => 'visit.id IS NULL'}
+  }
+
   def search(params = {}, user = nil)
 
     found_shows = shows.ordered_by_date

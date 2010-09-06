@@ -1,3 +1,10 @@
+#sort_by
+  <b>Сортировать по:</b>
+  %br
+  =link_to_if(params[:order] != 'by_name', 'По имени', movies_path(:order => 'by_name'))
+  %br
+  =link_to_if(params[:order] != 'by_popularity', 'По популярности', movies_path(:order => 'by_popularity'))
+
 %ul
   -@movies.each do |movie|
     %li

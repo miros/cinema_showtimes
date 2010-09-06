@@ -1,9 +1,5 @@
 class Show < ActiveRecord::Base
 
-  #def self.skip_time_zone_conversion_for_attributes
-  # [:time]
-  #end
-
   belongs_to :movie
   belongs_to :cinema
 
@@ -11,7 +7,6 @@ class Show < ActiveRecord::Base
   named_scope :with_cinemas, :include => :cinema
   named_scope :with_movies, :include => :movie
   named_scope :actual, lambda { { :conditions => ['time > ?', Time.zone.now] } }
-
 
   named_scope :in_interval, (lambda do |from, to|
     { :conditions => ['time BETWEEN ? and ?', from.utc, to.utc] }

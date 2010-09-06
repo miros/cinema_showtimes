@@ -3,12 +3,14 @@
   %span.city= @cinema.city
 
 -@shows.group_by {|show| show.time.to_date }.each do |date, shows_for_date|
-  %h4.date= (date.today?) ? 'Сегодня' : date
-  %ul
-    -shows_for_date.each do |show|
-      %li
-        %span.show_time= show.time_formatted
-        %span.movie_name= link_to show.movie.name, movie_path(show.movie)
+  %h3.date= (date.today?) ? 'Сегодня' : date
+  -shows_for_date.sort_by {|show| show.movie.name}.group_by(&:movie).each do |movie, shows|
+    %span.movie_name= link_to movie.name, movie_path(movie)
+    %ul
+      -shows.sort_by(&:time).each do |show|
+        %li
+          %span.show_time= show.time_formatted
+
 
 
 

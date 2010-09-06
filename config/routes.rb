@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :movie_visits
+
   map.resources :favourite_cinemas, :only => [:index, :create, :destroy]
 
   map.signup 'signup', :controller => 'users', :action => 'new'
@@ -8,8 +10,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
-  map.resources :movies, :only => [:index]
-  map.movie_shows 'movies/:id/:date', :controller => :movies, :action => :show, :date => 'today'
+  map.movie_shows 'movies/:id/:date', :controller => :movies, :action => :show, :date => 'today',
+                  :requirements => { :id =>/\d+/}
+  map.movies 'movies/:order', :controller => :movies, :action => :index, :order => 'by_popularity'
+
   map.resources :movies, :only => [:show]
   map.resources :cinemas
 
