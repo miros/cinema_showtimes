@@ -2,6 +2,8 @@ class MoviesController < ApplicationController
 
   def index
 
+    @movies = Movie.all
+
     @movies = case params[:order]
       when 'by_name'
         Movie.all_by_name
