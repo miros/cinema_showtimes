@@ -1,6 +1,6 @@
 class Show < ActiveRecord::Base
 
-  belongs_to :movie
+  belongs_to :movie, :counter_cache => true
   belongs_to :cinema
 
   named_scope :ordered_by_date, :order => 'time ASC'

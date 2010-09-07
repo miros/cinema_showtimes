@@ -1,13 +1,12 @@
 class Movie < ActiveRecord::Base
 
   has_many :shows
-
-  named_scope :all_by_popularity, :joins => :shows, :group => 'movies.id, movies.name,
-    movies.english_name, movies.genre, movies.country, movies.year, movies.duration, movies.afisha_link', :order => 'count(shows.id) desc'
+  
+  named_scope :all_by_popularity, :order => 'shows_count DESC'
   named_scope :all_by_name, :order => 'name ASC'
 
   named_scope :actual, lambda {||
-    {:joins => "INNER JOIN shows as actual_shows ON actual_shows.movie_id = movies.id AND actual_shows.time > '#{Time.zone.now}'"}
+    {:conditions => "(select id FROM shows AS actual_shows WHERE actual_shows.movie_id = movies.id AND actual_shows.time > '#{Time.zone.now.to_s(:db)}' LIMIT 1) IS NOT NULL"}
   }
 
   named_scope :unseen, lambda {|user|

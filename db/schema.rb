@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906121441) do
+ActiveRecord::Schema.define(:version => 20100907104237) do
 
   create_table "cinemas", :force => true do |t|
     t.string "name"
@@ -21,14 +21,21 @@ ActiveRecord::Schema.define(:version => 20100906121441) do
     t.integer "cinema_id"
   end
 
+  add_index "favourite_cinemas", ["cinema_id"], :name => "index_favourite_cinemas_on_cinema_id"
+  add_index "favourite_cinemas", ["user_id"], :name => "index_favourite_cinemas_on_user_id"
+
   create_table "movie_visits", :force => true do |t|
     t.integer  "user_id"
     t.integer  "movie_id"
     t.integer  "cinema_id"
-    t.datetime "time"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "movie_visits", ["cinema_id"], :name => "index_movie_visits_on_cinema_id"
+  add_index "movie_visits", ["movie_id"], :name => "index_movie_visits_on_movie_id"
+  add_index "movie_visits", ["user_id"], :name => "index_movie_visits_on_user_id"
 
   create_table "movies", :force => true do |t|
     t.string  "name"
@@ -38,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20100906121441) do
     t.integer "year"
     t.integer "duration"
     t.string  "afisha_link"
+    t.integer "shows_count"
   end
 
   create_table "shows", :force => true do |t|
@@ -45,6 +53,9 @@ ActiveRecord::Schema.define(:version => 20100906121441) do
     t.integer  "movie_id"
     t.datetime "time"
   end
+
+  add_index "shows", ["cinema_id"], :name => "index_shows_on_cinema_id"
+  add_index "shows", ["movie_id", "time"], :name => "index_shows_on_movie_id_and_time"
 
   create_table "users", :force => true do |t|
     t.string   "username"
