@@ -101,13 +101,13 @@ describe FavouriteCinemasController do
 
   describe "DELETE destroy" do
     it "destroys the requested favourite_cinema" do
-      FavouriteCinema.should_receive(:find).with("37").and_return(mock_favourite_cinema)
+      @scope.should_receive(:find).with("37").and_return(mock_favourite_cinema)
       mock_favourite_cinema.should_receive(:destroy)
       delete :destroy, :id => "37"
     end
 
     it "redirects to the favourite_cinemas list" do
-      FavouriteCinema.stub(:find).and_return(mock_favourite_cinema(:destroy => true))
+      @user.stub_chain(:favourite_cinemas, :find).and_return(mock_favourite_cinema(:destroy => true))
       delete :destroy, :id => "1"
       response.should redirect_to(favourite_cinemas_url)
     end

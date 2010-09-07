@@ -11,7 +11,7 @@
     <autoscroll-from-editor value="true" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
-    <group-history-entries value="false" />
+    <group-history-entries value="true" />
     <method-browser />
     <execution-inputs />
   </component>

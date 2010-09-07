@@ -31,7 +31,7 @@ class FavouriteCinemasController < ApplicationController
   end
 
   def destroy
-    @favourite_cinema = FavouriteCinema.find(params[:id])
+    @favourite_cinema = current_user.favourite_cinemas.find(params[:id])
     @favourite_cinema.destroy
     redirect_to favourite_cinemas_url
   end

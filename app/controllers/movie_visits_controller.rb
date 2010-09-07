@@ -1,5 +1,6 @@
 class MovieVisitsController < ApplicationController
 
+  before_filter :login_required
 
   def index
     @movie_visits = current_user.movie_visits
@@ -11,7 +12,7 @@ class MovieVisitsController < ApplicationController
   end
 
   def edit
-    @movie_visit = MovieVisit.find(params[:id])
+    @movie_visit = current_user.movie_visits.find(params[:id])
   end
 
   def create
@@ -26,7 +27,7 @@ class MovieVisitsController < ApplicationController
   end
 
   def update
-    @movie_visit = MovieVisit.find(params[:id])
+    @movie_visit = current_user.movie_visits.find(params[:id])
 
     if @movie_visit.update_attributes(params[:movie_visit])
       redirect_to(movie_visits_path(), :notice => 'MovieVisit was successfully updated.')
@@ -37,7 +38,7 @@ class MovieVisitsController < ApplicationController
   end
 
   def destroy
-    @movie_visit = MovieVisit.find(params[:id])
+    @movie_visit = current_user.movie_visits.find(params[:id])
     @movie_visit.destroy
     redirect_to(movie_visits_url)
   end
