@@ -9,13 +9,27 @@ describe MoviesController do
     before(:each) do
       @movie = mock_model(Movie, :id => 1, :name => 'test_movie', :null_object => true)
       @movies = [@movie]
-      @movies.stub!(:unseen).and_return(@movies)
+      Movie.stub!(:actual).and_return(@movies)
+      @movies.stub!(:all_by_name).and_return(@movies)
+      @movies.stub!(:all_by_popularity).and_return(@movies)
+    end
+
+    it "should show unseen movies if user logged in" do
+      @user = mock_model(User, :username => 'test user')
+      controller.stub(:current_user).and_return(@user)
+      @movies.should_receive(:unseen).and_return(@movies)
+      get :index, :order => 'by_name'
+    end
+
+    it "should show actual movies" do
+      Movie.should_receive(:actual).and_return(@movies)
+      get :index, :order => 'by_name'
     end
 
     describe "order by name" do
 
       it "should be success" do
-        Movie.should_receive(:all_by_name).and_return(@movies)
+        @movies.should_receive(:all_by_name).and_return(@movies)
         get :index, :order => 'by_name'
         puts [@movie]
         response.should be_success
@@ -27,7 +41,7 @@ describe MoviesController do
     describe "order by popularity" do
 
       it "should be success" do
-        Movie.should_receive(:all_by_popularity).and_return(@movies)
+        @movies.should_receive(:all_by_popularity).and_return(@movies)
         get :index, :order => 'by_popularity'
         response.should be_success
         response.should have_tag('span.movie_name', @movie.name)

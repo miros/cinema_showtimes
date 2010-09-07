@@ -2,18 +2,18 @@ class MoviesController < ApplicationController
 
   def index
 
-    @movies = Movie.all
+    @movies = Movie.actual
 
     @movies = case params[:order]
       when 'by_name'
-        Movie.all_by_name
+        @movies.all_by_name
       when 'by_popularity'
-        Movie.all_by_popularity
+        @movies.all_by_popularity
       else
-        Movie.all_by_popularity
+        @movies.all_by_popularity
     end
 
-    @movies = @movies.unseen(current_user)
+    @movies = @movies.unseen(current_user) if logged_in?
 
     respond_to do |format|
       format.html
