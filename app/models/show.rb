@@ -3,6 +3,8 @@ class Show < ActiveRecord::Base
   belongs_to :movie, :counter_cache => true
   belongs_to :cinema
 
+  validates_presence_of :cinema_id, :movie_id, :time
+
   named_scope :ordered_by_date, :order => 'time ASC'
   named_scope :with_cinemas, :include => :cinema
   named_scope :with_movies, :include => :movie

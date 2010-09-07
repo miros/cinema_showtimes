@@ -1,7 +1,9 @@
 class Movie < ActiveRecord::Base
 
   has_many :shows
-  
+
+  validates_presence_of :name
+
   named_scope :all_by_popularity, :order => 'shows_count DESC'
   named_scope :all_by_name, :order => 'name ASC'
 

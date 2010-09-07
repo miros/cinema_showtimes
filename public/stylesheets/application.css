@@ -117,5 +117,9 @@ ul.shows li {
     margin: 10px;
 }
 
+th {
+    text-align: left;
+}
+
 
 
