@@ -54,7 +54,7 @@ describe MoviesController do
   describe "get /movies/:id" do
 
     before(:each) do
-      @movie = mock_model(Movie, :name => 'test_movie', :null_object => true)
+      @movie = mock_model(Movie, :name => 'test_movie', :null_object => true, :image_url => 'url')
       Movie.should_receive(:find).and_return(@movie)
 
       @cinema = mock_model(Cinema, :name => 'test_cinema_name')
