@@ -14,7 +14,7 @@
         <td><%=h movie_visit.movie.name %></td>
         <td><%=h movie_visit.cinema.name %></td>
         <td><%=h movie_visit.date %></td>
-        <td><%= link_to 'Удалить', movie_visit, :confirm => 'Are you sure?', :method => :delete %></td>
+        <td><%= link_to 'Удалить', movie_visit, :confirm => 'Удалить?', :method => :delete %></td>
         <td><%= link_to 'Редактировать', edit_movie_visit_path(movie_visit) %></td>
       </tr>
     <% end %>

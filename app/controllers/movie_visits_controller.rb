@@ -16,6 +16,7 @@ class MovieVisitsController < ApplicationController
   end
 
   def create
+
     @movie_visit = MovieVisit.new(params[:movie_visit])
     @movie_visit.user = current_user
 
