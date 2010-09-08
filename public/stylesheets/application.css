@@ -126,4 +126,19 @@ th {
 }
 
 
+.nice_table {
+    border-collapse: collapse;
+}
+
+.nice_table td, th {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.nice_table th {
+    background-color: #EEE;
+    text-align: left;
+}
+
+
 

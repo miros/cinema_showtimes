@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :movie_visits
+  map.new_movie_visit_for_movie 'movies/:movie/movie_visit/new', :controller => :movie_visits, :action => :new
 
   map.resources :favourite_cinemas, :only => [:index, :create, :destroy]
 
