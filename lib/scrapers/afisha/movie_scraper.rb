@@ -7,8 +7,6 @@ module Scrapers::Afisha
       @browser = browser
     end
 
-    # !TODO исправить парсинг
-
     def scrap(movie_hash)
 
       html = @browser.get(movie_hash[:afisha_link])

@@ -60,6 +60,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] test-unit (v1.2.3, /usr/lib/ruby/gems/1.8/gems/test-unit-1.2.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.4.3.1, /usr/lib/ruby/gems/1.8/gems/nokogiri-1.4.3.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.0.17, /usr/lib/ruby/gems/1.8/gems/haml-3.0.17)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mechanize (v1.0.0, /usr/lib/ruby/gems/1.8/gems/mechanize-1.0.0)" level="application" />
   </component>
 </module>
 

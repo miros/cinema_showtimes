@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100907104237) do
+ActiveRecord::Schema.define(:version => 20100908105457) do
 
   create_table "cinemas", :force => true do |t|
     t.string "name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20100907104237) do
     t.integer "duration"
     t.string  "afisha_link"
     t.integer "shows_count"
+    t.string  "image_url"
   end
 
   create_table "shows", :force => true do |t|

@@ -1,7 +1,7 @@
 class ShowsCreator
 
-  def initialize(movie_scraper)
-    @movie_scraper = movie_scraper
+  def initialize(movie_scrapers)
+    @movie_scrapers = movie_scrapers
   end
 
   def create_shows(shows)
@@ -14,7 +14,7 @@ class ShowsCreator
       movie = Movie.find_by_name(movie_hash[:name])
 
       if !movie
-        movie_hash = @movie_scraper.scrap(movie_hash)
+        movie_hash = apply_movie_scrapers(movie_hash)
         movie = Movie.create(movie_hash)
       end
 
@@ -24,5 +24,12 @@ class ShowsCreator
       Show.create(show)
     end
   end
+
+  private
+
+    def apply_movie_scrapers(movie_hash)
+      @movie_scrapers.each {|scraper| movie_hash = scraper.scrap(movie_hash)}
+      movie_hash
+    end
 
 end
