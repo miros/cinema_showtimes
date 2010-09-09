@@ -19,7 +19,7 @@
   <%= @movie.duration %> мин.
 </p>
 <p>
-  Бюджет: $<%= @movie.budget %>
+  Бюджет: <%= number_to_currency @movie.budget, :precision => 0 %>
   <br />
   Премьера: <%= @movie.premier_date %>
 </p>
