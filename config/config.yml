@@ -3,7 +3,7 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  #proxy: 'http://192.168.1.250:3128'
+  proxy: 'http://192.168.1.250:3128'
   #proxy: false
 
 test:

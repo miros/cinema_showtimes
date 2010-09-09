@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100909083034) do
+ActiveRecord::Schema.define(:version => 20100909121156) do
 
   create_table "cinemas", :force => true do |t|
     t.string "name"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20100909083034) do
     t.integer  "budget"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "premier_date"
   end
 
   create_table "shows", :force => true do |t|
