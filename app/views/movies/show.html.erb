@@ -18,6 +18,11 @@
   <%= @movie.year %>,
   <%= @movie.duration %> мин.
 </p>
+<p>
+  Бюджет: $<%= @movie.budget %>
+  <br />
+  Премьера: <%= @movie.premier_date %>
+</p>
 
 
 [<%= link_to_if(!(@date.today?), 'Сегодня', movie_shows_path(@movie, :date => 'today')) %>]
