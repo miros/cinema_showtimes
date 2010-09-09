@@ -15,6 +15,10 @@ class Movie < ActiveRecord::Base
     {:joins => "LEFT JOIN movie_visits AS visit ON visit.movie_id = movies.id AND user_id = #{user.id}", :conditions => 'visit.id IS NULL'}
   }
 
+  named_scope :with_outdated_ratings, lambda {||
+    {:conditions => ['updated_at < ? AND created_at > ?', 5.days.ago, 30.days.ago]}
+  }
+
   def search(params = {}, user = nil)
 
     found_shows = shows.ordered_by_date

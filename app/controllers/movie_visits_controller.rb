@@ -21,7 +21,7 @@ class MovieVisitsController < ApplicationController
     @movie_visit.user = current_user
 
     if @movie_visit.save
-      redirect_to(movie_visits_path(), :notice => 'MovieVisit was successfully created.')
+      redirect_to(movie_visits_path(), :notice => 'Данные сохранены.')
     else
       render :action => "new"
     end
@@ -31,7 +31,7 @@ class MovieVisitsController < ApplicationController
     @movie_visit = current_user.movie_visits.find(params[:id])
 
     if @movie_visit.update_attributes(params[:movie_visit])
-      redirect_to(movie_visits_path(), :notice => 'MovieVisit was successfully updated.')
+      redirect_to(movie_visits_path(), :notice => 'Данные обновлены.')
     else
       render :action => "edit"
     end

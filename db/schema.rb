@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100908105457) do
+ActiveRecord::Schema.define(:version => 20100909083034) do
 
   create_table "cinemas", :force => true do |t|
     t.string "name"
@@ -38,15 +38,20 @@ ActiveRecord::Schema.define(:version => 20100908105457) do
   add_index "movie_visits", ["user_id"], :name => "index_movie_visits_on_user_id"
 
   create_table "movies", :force => true do |t|
-    t.string  "name"
-    t.string  "english_name"
-    t.string  "genre"
-    t.string  "country"
-    t.integer "year"
-    t.integer "duration"
-    t.string  "afisha_link"
-    t.integer "shows_count"
-    t.string  "image_url"
+    t.string   "name"
+    t.string   "english_name"
+    t.string   "genre"
+    t.string   "country"
+    t.integer  "year"
+    t.integer  "duration"
+    t.string   "afisha_link"
+    t.integer  "shows_count"
+    t.string   "image_url"
+    t.float    "kinopoisk_rating"
+    t.float    "imdb_rating"
+    t.integer  "budget"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "shows", :force => true do |t|

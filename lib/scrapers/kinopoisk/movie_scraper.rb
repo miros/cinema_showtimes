@@ -36,6 +36,12 @@ module Scrapers::Kinopoisk
       movie_image = agent.page.at('.movie div a img')
       movie_hash[:image_url] =  KINOPOISK_URL + movie_image[:src] if movie_image
 
+      imdb_rating_block = agent.page.at('#block_rating div:nth-child(2)')
+      movie_hash[:imdb_rating] = imdb_rating_block.text[/IMDB: ([0-9.]+)/, 1] if imdb_rating_block
+
+      kinopoisk_rating_block = agent.page.at('#block_rating a.continue')
+      movie_hash[:kinopoisk_rating] = kinopoisk_rating_block.text[/[0-9.]+/] if kinopoisk_rating_block
+
       movie_hash
     end
 

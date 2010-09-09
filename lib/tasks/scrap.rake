@@ -19,18 +19,29 @@ namespace :scrap do
 
   end
 
-  task :images => :environment do
+  task :kinopoisk => :environment do
+    update_kinopoisk_info { Movie.all }  
+  end
+
+  task :ratings => :environment do
+    update_kinopoisk_info { Movie.with_outdated_ratings }
+  end
+
+  def update_kinopoisk_info()
     movie_scraper =  Scrapers::Kinopoisk::MovieScraper.new(Browser.new)
 
-    Movie.find_all_by_image_url(nil).each do |movie|
-      info = movie_scraper.scrap({:name => movie.name})
-      puts info[:image_url]
-      movie.update_attribute(:image_url, info[:image_url]) if info[:image_url] 
-    end
+    movies = yield
 
+    movies.each do |movie|
+      info = movie_scraper.scrap({:name => movie.name})
+      puts info.inspect
+      movie.update_attributes(info)
+    end
   end
 
 end
+
+
 
 
 task :reset_shows => :environment do

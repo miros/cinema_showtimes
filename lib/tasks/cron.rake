@@ -1,1 +1,1 @@
-task :cron => 'scrap:clean'
+task :cron => ['scrap:clean', 'scrap:ratings']

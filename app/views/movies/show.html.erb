@@ -2,6 +2,9 @@
 <%= javascript_include_tag 'movies.show' %>
 
 <h1 class="movie_name"><%= @movie.name %></h1>
+<p>IMDB: <%= @movie.imdb_rating %>, Кинопоиск: <%= @movie.kinopoisk_rating %></p>
+
+
 <%= button_to('Смотрел', new_movie_visit_for_movie_path(@movie), :method => :get) %>
 
 
