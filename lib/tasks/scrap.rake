@@ -28,7 +28,7 @@ namespace :scrap do
   end
 
   task :all_ratings => :environment do
-    update_kinopoisk_info { Movie.find_all_by_kinopoisk_rating(:nil) }
+    update_kinopoisk_info { Movie.find_all_by_kinopoisk_rating(nil) }
   end
 
   def update_kinopoisk_info()
