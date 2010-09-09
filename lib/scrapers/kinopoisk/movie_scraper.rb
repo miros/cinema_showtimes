@@ -10,6 +10,8 @@ module Scrapers::Kinopoisk
       @browser = browser
     end
 
+    # !TODO REFACTOR
+
     def scrap(movie_hash)
 
       puts movie_hash.inspect
@@ -43,11 +45,14 @@ module Scrapers::Kinopoisk
       movie_hash[:kinopoisk_rating] = kinopoisk_rating_block.text[/[0-9.]+/] if kinopoisk_rating_block
 
       budget_td_block = find_tr('бюджет')
-      movie_hash[:budget] = budget_td_block.text.gsub(/[^\d]/, '').to_i if budget_td_block
+      if (budget_td_block && budget_td_block.text.starts_with?('$'))
+        movie_hash[:budget] = budget_td_block.text.gsub(/[^\d]/, '').to_i
+      end
 
       premier_td_block = find_tr('премьера (РФ)')
       movie_hash[:premier_date] = Utils::convert_russian_date(premier_td_block.at_css('a.all').text) if premier_td_block
- 
+
+
       movie_hash
     end
 
