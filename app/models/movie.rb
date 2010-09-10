@@ -19,6 +19,10 @@ class Movie < ActiveRecord::Base
     {:conditions => ['updated_at < ? AND created_at > ?', 5.days.ago, 30.days.ago]}
   }
 
+  named_scope :premieres, lambda {||
+    {:conditions => ['premier_date > ?', Time.zone.now.beginning_of_week.to_date]}
+  }
+
   def premiere?()
     return false unless premier_date
     return self.premier_date > Time.zone.now.beginning_of_week.to_date

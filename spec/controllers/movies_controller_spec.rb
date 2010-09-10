@@ -49,6 +49,17 @@ describe MoviesController do
 
     end
 
+    describe "showing premieres" do
+
+      it "should be success" do
+        @movies.should_receive(:premieres).and_return(@movies)
+        get :index, :order => 'by_popularity', :premieres => true
+        response.should be_success
+        response.should have_tag('span.movie_name', @movie.name)
+      end
+
+    end
+
   end
 
   describe "get /movies/:id" do

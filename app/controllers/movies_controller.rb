@@ -14,6 +14,8 @@ class MoviesController < ApplicationController
     end
 
     @movies = @movies.unseen(current_user) if logged_in?
+    @movies = @movies.premieres if params[:premieres]
+
 
     respond_to do |format|
       format.html

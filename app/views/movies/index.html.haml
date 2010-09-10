@@ -1,9 +1,17 @@
 #sort_by
   <b>Сортировать по:</b>
   %br
-  =link_to_if(params[:order] != 'by_name', 'По имени', movies_path(:order => 'by_name'))
+  =link_to_if(params[:order] != 'by_name', 'По имени', :overwrite_params => {:order => 'by_name'})
   %br
-  =link_to_if(params[:order] != 'by_popularity', 'По популярности', movies_path(:order => 'by_popularity'))
+  =link_to_if(params[:order] != 'by_popularity', 'По популярности', :overwrite_params => {:order => 'by_popularity'})
+
+#films_type_selector
+  <b>Показывать:</b>
+  %br
+  =link_to_if(params[:premieres], 'Все', :overwrite_params => {:premieres => false})
+  %br
+  =link_to_if(!params[:premieres], 'Премьеры', :overwrite_params => {:premieres => true})
+
 
 %ul
   -@movies.each do |movie|
