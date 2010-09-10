@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="d4561840-67ae-45c6-9bf8-3ab0cc92afa0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/movies_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/movies_controller_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/index.html.haml" afterPath="$PROJECT_DIR$/app/views/movies/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/application.css" afterPath="$PROJECT_DIR$/public/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/metric.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/test.log" afterPath="$PROJECT_DIR$/log/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cinema_showtimes.iml" afterPath="$PROJECT_DIR$/.idea/cinema_showtimes.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/metric.rake" afterPath="$PROJECT_DIR$/lib/tasks/metric.rake" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="cinema_showtimes.iws" />
@@ -39,10 +30,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="movies_controller_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="movies_controller_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/controllers/movies_controller_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="118" selection-start="884" selection-end="884" vertical-scroll-proportion="0.22654867">
+            <state line="30" column="118" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metric.rake" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/metric.rake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="7" selection-start="295" selection-end="295" vertical-scroll-proportion="0.39310345">
               <folding />
             </state>
           </provider>
@@ -75,13 +75,13 @@
         <option value="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" />
         <option value="$PROJECT_DIR$/app/views/movies/show.html.erb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/metric.rake" />
         <option value="$PROJECT_DIR$/app/models/movie.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
         <option value="$PROJECT_DIR$/public/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/movies/index.html.haml" />
         <option value="$PROJECT_DIR$/spec/controllers/movies_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/metric.rake" />
       </list>
     </option>
   </component>
@@ -149,7 +149,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -163,11 +163,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="tasks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -673,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/metric.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="241" selection-end="241" vertical-scroll-proportion="0.26206896">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="28" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
@@ -717,7 +710,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/movies_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="118" selection-start="884" selection-end="884" vertical-scroll-proportion="0.22654867">
+        <state line="30" column="118" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/metric.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="7" selection-start="295" selection-end="295" vertical-scroll-proportion="0.39310345">
           <folding />
         </state>
       </provider>

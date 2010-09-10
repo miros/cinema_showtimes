@@ -1,11 +1,16 @@
-require 'metric_fu'
+begin
 
-MetricFu::Configuration.run do |config|
+  require 'metric_fu'
 
-    config.reek = { :dirs_to_reek => ['app', 'lib'] }
+  MetricFu::Configuration.run do |config|
 
-    config.metrics  = [:churn, :saikuro, :stats, :flog, :flay, :reek]
-    #config.metrics  = [:reek]
-    config.graphs   = [:stats, :flog, :flay, :reek]
+      config.reek = { :dirs_to_reek => ['app', 'lib'] }
 
-end
+      config.metrics  = [:churn, :saikuro, :stats, :flog, :flay, :reek]
+      #config.metrics  = [:reek]
+      config.graphs   = [:stats, :flog, :flay, :reek]
+
+  end
+
+rescue LoadError
+end  
