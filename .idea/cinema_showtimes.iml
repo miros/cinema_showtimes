@@ -81,7 +81,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] ruby_parser (v2.0.4, /usr/lib/ruby/gems/1.8/gems/ruby_parser-2.0.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] sexp_processor (v3.0.4, /usr/lib/ruby/gems/1.8/gems/sexp_processor-3.0.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] flay (v1.4.1, /usr/lib/ruby/gems/1.8/gems/flay-1.4.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] jscruggs-metric_fu (v1.1.5, /usr/lib/ruby/gems/1.8/gems/jscruggs-metric_fu-1.1.5)" level="application" />
+    <orderEntry type="library" name="[gem] jscruggs-metric_fu (v1.1.5, null)" level="application" />
   </component>
 </module>
 
