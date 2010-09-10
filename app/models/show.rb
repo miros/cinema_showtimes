@@ -15,7 +15,7 @@ class Show < ActiveRecord::Base
   end)
 
   named_scope :for_date, (lambda do |date|
-    { :conditions => ['time BETWEEN ? and ?', date, date + 1.day] }
+    { :conditions => ['time BETWEEN ? and ?', date.to_time.utc, (date + 1.day).to_time.utc] }
   end)
 
   named_scope :in_favourite_cinemas, (lambda do |user|

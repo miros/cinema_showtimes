@@ -19,6 +19,11 @@ class Movie < ActiveRecord::Base
     {:conditions => ['updated_at < ? AND created_at > ?', 5.days.ago, 30.days.ago]}
   }
 
+  def premiere?()
+    return false unless premier_date
+    return self.premier_date > Time.zone.now.beginning_of_week.to_date
+  end
+
   def search(params = {}, user = nil)
 
     found_shows = shows.ordered_by_date

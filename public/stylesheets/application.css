@@ -140,5 +140,14 @@ th {
     text-align: left;
 }
 
+.premiere {
+   color: red;
+   font-size: 10px;
+}
+
+.about {
+    width: 600px;
+}
+
 
 
