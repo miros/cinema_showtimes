@@ -3,6 +3,7 @@ set :repository,  "git@github.com:miros/cinema_showtimes.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+set :copy_strategy, :export
 
 role :web, "mirosm.ru" # Your HTTP server, Apache/etc
 role :app, "mirosm.ru" # This may be the same as your `Web` server
