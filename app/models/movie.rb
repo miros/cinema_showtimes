@@ -7,6 +7,11 @@ class Movie < ActiveRecord::Base
   named_scope :all_by_popularity, :order => 'shows_count DESC'
   named_scope :all_by_name, :order => 'name ASC'
 
+  named_scope :all_by_screens, :order => %{
+    (SELECT DISTINCT COUNT(*) FROM shows WHERE shows.movie_id = movies.id) DESC
+  }
+
+
   named_scope :actual, lambda {||
     {:conditions => "(select id FROM shows AS actual_shows WHERE actual_shows.movie_id = movies.id AND actual_shows.time > '#{Time.zone.now.to_s(:db)}' LIMIT 1) IS NOT NULL"}
   }

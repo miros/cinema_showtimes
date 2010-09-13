@@ -4,18 +4,20 @@ class MoviesController < ApplicationController
 
     @movies = Movie.actual
 
+
     @movies = case params[:order]
       when 'by_name'
         @movies.all_by_name
       when 'by_popularity'
         @movies.all_by_popularity
+      when 'by_screens'
+        @movies.all_by_screens
       else
         @movies.all_by_popularity
     end
 
     @movies = @movies.unseen(current_user) if logged_in?
     @movies = @movies.premieres if params[:premieres]
-
 
     respond_to do |format|
       format.html

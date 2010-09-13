@@ -38,10 +38,10 @@ test:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
-  adapter: jdbcmysql
+  adapter: mysql
   encoding: utf8
   reconnect: false
-  database: cinema_showtimes_development
+  database: cinema_showtimes
   pool: 5
   username: root
   password: root

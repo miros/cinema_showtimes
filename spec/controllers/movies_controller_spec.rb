@@ -49,6 +49,17 @@ describe MoviesController do
 
     end
 
+    describe "order by screens" do
+
+      it "should be success" do
+        @movies.should_receive(:all_by_screens).and_return(@movies)
+        get :index, :order => 'by_screens'
+        response.should be_success
+        response.should have_tag('span.movie_name', @movie.name)
+      end
+
+    end
+
     describe "showing premieres" do
 
       it "should be success" do
