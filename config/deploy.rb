@@ -28,3 +28,10 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+namespace :rake do
+  desc "Run a task on a remote server."
+  task :invoke do
+    run("cd #{deploy_to}/current; /usr/bin/rake #{ENV['task']} RAILS_ENV=production")  
+  end
+end
