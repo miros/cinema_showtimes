@@ -13,7 +13,7 @@
     <% @movie_visits.each do |movie_visit| %>
       <tr>
         <td><%=h movie_visit.movie.name %></td>
-        <td><%=h movie_visit.cinema.name %></td>
+        <td><%=h movie_visit.cinema.name if movie_visit.cinema  %></td>
         <td><%=h movie_visit.date %></td>
         <td>
           [<%= link_to 'Удалить', movie_visit, :confirm => 'Удалить?', :method => :delete %>]
