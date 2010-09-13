@@ -32,6 +32,6 @@ end
 namespace :rake do
   desc "Run a task on a remote server."
   task :invoke do
-    run("cd #{deploy_to}/current; /usr/bin/rake #{ENV['task']} RAILS_ENV=production")  
+    run("cd #{deploy_to}/current && /usr/bin/env rake #{ENV['TASK']} RAILS_ENV=production")  
   end
 end
