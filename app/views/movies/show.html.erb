@@ -84,7 +84,7 @@
         <% shows.each do |show| %>
             <li>
               <span class="cinema_name"><%= link_to show.cinema.name, show.cinema %></span>
-              <% if show.is_3d %>
+              <% if show.is_3d && !params[:in_3d] %>
                 (3D)
               <% end %>
             </li>
