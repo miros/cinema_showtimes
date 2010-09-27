@@ -18,6 +18,7 @@ class MoviesController < ApplicationController
 
     @movies = @movies.unseen(current_user) if logged_in?
     @movies = @movies.premieres if params[:premieres]
+    @movies = @movies.in_3d if params[:in_3d]
 
     respond_to do |format|
       format.html

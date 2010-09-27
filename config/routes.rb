@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.movie_shows 'movies/:id/:date', :controller => :movies, :action => :show, :date => 'today',
                   :requirements => { :id =>/\d+/}
   map.movies_premieres 'movies/premieres/:order', :controller => :movies, :action => :index, :order => 'by_popularity', :premieres => true
+  map.movies_premieres 'movies/3d/:order', :controller => :movies, :action => :index, :order => 'by_popularity', :in_3d => true
   map.movies 'movies/:order', :controller => :movies, :action => :index, :order => 'by_popularity'
 
   map.resources :movies, :only => [:show]

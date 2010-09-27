@@ -11,6 +11,7 @@ class Movie < ActiveRecord::Base
     (SELECT DISTINCT COUNT(*) FROM shows WHERE shows.movie_id = movies.id) DESC
   }
 
+  named_scope :in_3d, :conditions => {:is_3d => 1}
 
   named_scope :actual, lambda {||
     {:conditions => "(select id FROM shows AS actual_shows WHERE actual_shows.movie_id = movies.id AND actual_shows.time > '#{Time.zone.now.to_s(:db)}' LIMIT 1) IS NOT NULL"}

@@ -45,7 +45,7 @@ module Scrapers::Afisha
       end
 
       def parse_shows(cinema, movie, cinema_block)
-        create_shows(cinema, movie, parse_show_times(cinema_block))
+        create_shows(cinema, movie, parse_show_times(cinema_block), block_is_for_3d_movies(cinema_block))
         create_shows(cinema, movie, parse_show_times_for_3d_movies(cinema_block), true)
       end
 
@@ -59,6 +59,10 @@ module Scrapers::Afisha
       def parse_show_times_for_3d_movies(cinema_block)
         return [] if not next_block_is_for_3d_movies(cinema_block)
         parse_show_times(cinema_block.next)
+      end
+
+      def block_is_for_3d_movies(cinema_block)
+        cinema_block['class'] == 'b-tr-3d'
       end
 
       def next_block_is_for_3d_movies(cinema_block)

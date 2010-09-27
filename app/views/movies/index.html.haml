@@ -1,19 +1,25 @@
 #sort_by
   <b>Сортировать по:</b>
   %br
-  =link_to_unless_current('По имени', :overwrite_params => {:order => 'by_name'})
+  =link_to_unless_current('По имени', params.merge(:order => 'by_name'))
   %br
-  =link_to_unless_current('По популярности', :overwrite_params => {:order => 'by_popularity'})
+  =link_to_unless_current('По популярности', params.merge(:order => 'by_popularity'))
   %br
-  =link_to_unless_current('Кол-ву экранов', :overwrite_params => {:order => 'by_screens'})
+  =link_to_unless_current('Кол-ву экранов', params.merge(:order => 'by_screens'))
 
-#films_type_selector
+.films_type_selector
   <b>Показывать:</b>
   %br
-  =link_to_unless_current('Все', :overwrite_params => {:premieres => false})
+  =link_to_unless_current('Все', params.merge(:premieres => false))
   %br
-  =link_to_unless_current('Премьеры', :overwrite_params => {:premieres => true})
+  =link_to_unless_current('Премьеры', params.merge(:premieres => true))
 
+.films_type_selector
+  <b>Показывать:</b>
+  %br
+  =link_to_unless(!params[:in_3d], 'Все', params.merge(:in_3d => false))
+  %br
+  =link_to_unless(params[:in_3d], '3D', params.merge(:in_3d => true))
 
 %ul
   -@movies.each do |movie|
@@ -23,3 +29,6 @@
       - if movie.premiere?
         %span.premiere
           премьера
+      - if movie.is_3d
+        %span
+          (3D)

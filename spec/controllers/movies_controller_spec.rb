@@ -71,6 +71,17 @@ describe MoviesController do
 
     end
 
+    describe "showing 3d" do
+
+      it "should be success" do
+        @movies.should_receive(:in_3d).and_return(@movies)
+        get :index, :order => 'by_popularity', :in_3d => true
+        response.should be_success
+        response.should have_tag('span.movie_name', @movie.name)
+      end
+
+    end
+
   end
 
   describe "get /movies/:id" do
