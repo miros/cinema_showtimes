@@ -36,7 +36,7 @@ module Scrapers::Afisha
       end
 
       def parse_cinema_block(movie, cinema_block)
-        return if cinema_block['id'] == nil
+        return if cinema_block['id'] == nil || cinema_block['id'] =~ /_id/
 
         cinema_name = cinema_block.at_css('.b-td-item a').content
         cinema = {:name => cinema_name, :city => 'москва'}
