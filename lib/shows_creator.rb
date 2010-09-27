@@ -13,7 +13,7 @@ class ShowsCreator
 
       movie = Movie.find_by_name(movie_hash[:name])
 
-      if !movie
+      unless movie
         movie_hash = apply_movie_scrapers(movie_hash)
         movie = Movie.create(movie_hash)
       end

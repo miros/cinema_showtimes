@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100910183147) do
+ActiveRecord::Schema.define(:version => 20100927090614) do
 
   create_table "cinemas", :force => true do |t|
     t.string "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20100910183147) do
     t.integer  "cinema_id"
     t.integer  "movie_id"
     t.datetime "time"
+    t.boolean  "is_3d"
   end
 
   add_index "shows", ["cinema_id"], :name => "index_shows_on_cinema_id"

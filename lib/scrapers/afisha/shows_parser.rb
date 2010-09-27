@@ -41,19 +41,18 @@ module Scrapers::Afisha
         cinema_name = cinema_block.at_css('.b-td-item a').content
         cinema = {:name => cinema_name, :city => 'москва'}
 
-        show_times = create_show_times(cinema_block)
-        create_shows(cinema, movie, show_times)
+        parse_shows(cinema, movie, cinema_block)
+
       end
 
-      def create_show_times(cinema_block)
-        show_times = parse_show_times(cinema_block)
-        show_times += parse_show_times_for_3d_movies(cinema_block)
-        return show_times
+      def parse_shows(cinema, movie, cinema_block)
+        create_shows(cinema, movie, parse_show_times(cinema_block))
+        create_shows(cinema, movie, parse_show_times_for_3d_movies(cinema_block))
       end
 
-      def create_shows(cinema, movie, show_times)
+      def create_shows(cinema, movie, show_times, is_3d = false)
         show_times.each do |time|
-          show = create_show(cinema, movie, time)
+          show = create_show(cinema, movie, time, is_3d)
           @shows << show
         end
       end
@@ -67,7 +66,7 @@ module Scrapers::Afisha
         cinema_block['class'] == 's-tr-next3d'
       end
 
-      def create_show(cinema, movie, time)
+      def create_show(cinema, movie, time, is_3d = false)
         show = {}
 
         show_time_hour, show_time_min = time.split(':')
@@ -78,6 +77,7 @@ module Scrapers::Afisha
         show[:time] = Time.zone.local(show_date.year, show_date.month, show_date.day, show_time_hour, show_time_min, 0)
         show[:movie] = movie
         show[:cinema] = cinema
+        show[:is_3d] = is_3d
         return show
       end
 
