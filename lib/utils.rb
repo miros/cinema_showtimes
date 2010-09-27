@@ -22,7 +22,11 @@ module Utils
       'декабря'  => 'december'    
     }
 
-    Date.parse(Utils::replace_all(date_str, conversion_table))
+    begin
+      Date.parse(Utils::replace_all(date_str, conversion_table))
+    rescue
+      return nil
+    end
 
   end
 
