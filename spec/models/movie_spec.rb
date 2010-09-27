@@ -12,6 +12,7 @@ describe Movie, 'Search' do
     @shows_scope.stub(:actual).and_return(@shows_scope)
     @shows_scope.stub(:with_cinemas).and_return(@shows_scope)
     @shows_scope.stub(:with_movies).and_return(@shows_scope)
+    @shows_scope.stub(:in_3d).and_return(@shows_scope)
 
     @movie.stub_chain(:shows, :ordered_by_date).and_return(@shows_scope)
 
@@ -94,6 +95,11 @@ describe Movie, 'Search' do
    it 'should not search movies in favourite cinemas if user is not logged in' do
     @shows_scope.should_not_receive(:in_favourite_cinemas)
     @movie.search({:date => Date.today, :favourite_cinemas => true})
+  end
+
+   it 'should search 3d movies' do
+    @shows_scope.should_receive(:in_3d).and_return(@shows_scope)
+    @movie.search({:date => Date.today, :in_3d => true})
   end
 
 end

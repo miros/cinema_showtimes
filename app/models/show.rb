@@ -9,6 +9,7 @@ class Show < ActiveRecord::Base
   named_scope :with_cinemas, :include => :cinema
   named_scope :with_movies, :include => :movie
   named_scope :actual, lambda { { :conditions => ['time > ?', Time.zone.now] } }
+  named_scope :in_3d, :conditions => {:is_3d => 1}
 
   named_scope :in_interval, (lambda do |from, to|
     { :conditions => ['time BETWEEN ? and ?', from.utc, to.utc] }

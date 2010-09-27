@@ -39,7 +39,8 @@ class Movie < ActiveRecord::Base
     found_shows = found_shows.actual if params[:date].today?
 
     found_shows = found_shows.in_favourite_cinemas(user) if (params[:favourite_cinemas] && user)
-    
+    found_shows = found_shows.in_3d if params[:in_3d] 
+
     date_for_shows = params[:date]
 
     found_shows = found_shows.for_date(date_for_shows)

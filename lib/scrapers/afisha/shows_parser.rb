@@ -36,8 +36,7 @@ module Scrapers::Afisha
       end
 
       def parse_cinema_block(movie, cinema_block)
-        return if cinema_block['id'] == nil || cinema_block['id'] =~ /_id/
-
+        return if cinema_block['id'] == nil || cinema_block['id'] =~ /_3d/
         cinema_name = cinema_block.at_css('.b-td-item a').content
         cinema = {:name => cinema_name, :city => 'москва'}
 
@@ -47,7 +46,7 @@ module Scrapers::Afisha
 
       def parse_shows(cinema, movie, cinema_block)
         create_shows(cinema, movie, parse_show_times(cinema_block))
-        create_shows(cinema, movie, parse_show_times_for_3d_movies(cinema_block))
+        create_shows(cinema, movie, parse_show_times_for_3d_movies(cinema_block), true)
       end
 
       def create_shows(cinema, movie, show_times, is_3d = false)
