@@ -3,7 +3,6 @@ Rake.application.options.trace = true
 namespace :scrap do
 
   task :all => [:afisha]
-  task :clean => [:reset_shows, :all]
 
   task :afisha => :environment do
 

@@ -1,3 +1,5 @@
+# coding: utf-8
+
 module Scrapers::Afisha
 
   class MovieScraper
