@@ -1,6 +1,6 @@
 task :cron do
-  Rake::Task["scrap:clean"].invoke
-  Rake::Task["scrap:ratings"].invoke
+  Rake::Task["reset_shows"].invoke
+  Rake::Task["scrap:all"].invoke
 end
 
 

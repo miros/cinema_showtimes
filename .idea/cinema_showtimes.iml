@@ -84,6 +84,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v3.0.1, /usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-3.0.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] railties (v3.0.1, /usr/local/ruby/lib/ruby/gems/1.9.1/gems/railties-3.0.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.1, /usr/local/ruby/lib/ruby/gems/1.9.1/gems/activeresource-3.0.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mysql (v2.8.1, /usr/local/ruby/lib/ruby/gems/1.9.1/gems/mysql-2.8.1)" level="application" />
   </component>
 </module>
 
