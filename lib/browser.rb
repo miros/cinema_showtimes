@@ -1,3 +1,5 @@
+require 'ap'
+
 class Browser
 
   DEFAULT_HEADERS = {
@@ -21,6 +23,9 @@ class Browser
     params = @headers.merge({
       :proxy => APP_CONFIG['proxy']        
     })
+
+    ap url
+
     open(url, params).read
   end
 

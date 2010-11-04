@@ -29,9 +29,14 @@ module Scrapers::Kinopoisk
 
       @agent.get(KINOPOISK_URL)
 
-      search_form = @agent.page.form_with('searchForm')
-      search_form.kp_query = @movie_hash[:name]
-      search_form.submit
+      begin
+        search_form = @agent.page.form_with('searchForm')
+        search_form.kp_query = @movie_hash[:name]
+        search_form.submit
+      rescue
+        puts "EXCEPTION!!!"
+        return @movie_hash
+      end
 
       if @agent.page.uri.to_s =~ /index.php/
          movie_link = @agent.page.at('tr:nth-child(2) .all')
