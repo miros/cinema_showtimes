@@ -14,7 +14,11 @@ class Movie < ActiveRecord::Base
   named_scope :in_3d, :conditions => {:is_3d => 1}
 
   named_scope :actual, lambda {||
-    {:conditions => "(select id FROM shows AS actual_shows WHERE actual_shows.movie_id = movies.id AND actual_shows.time > '#{Time.zone.now.to_s(:db)}' LIMIT 1) IS NOT NULL"}
+    {:conditions => "(select id FROM shows AS actual_shows WHERE
+        actual_shows.movie_id = movies.id AND
+        actual_shows.time BETWEEN
+          '#{Time.zone.now.to_s(:db)}' AND '#{(Date.today.end_of_day + 5.hours).to_s(:db)}' 
+      LIMIT 1) IS NOT NULL"}
   }
 
   named_scope :unseen, lambda {|user|
