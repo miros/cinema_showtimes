@@ -63,8 +63,8 @@ module Scrapers::Kinopoisk
 
       premier_td_block = find_td('премьера (РФ)')
 
-      if premier_td_block && premier_td_block.at_css('a.all')
-        @movie_hash[:premier_date] = Utils.convert_russian_date(premier_td_block.at_css('a.all').text)
+      if premier_td_block && premier_td_block.at_css('a')
+        @movie_hash[:premier_date] = Utils.convert_russian_date(premier_td_block.at_css('a').text)
       end
 
       about_block = @agent.page.at('.news ._reachbanner_')
