@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
       when 'by_screens'
         @movies.all_by_screens
       else
-        @movies.all_by_popularity
+        @movies.all_by_screens
     end
 
     @movies = @movies.unseen(current_user) if logged_in?

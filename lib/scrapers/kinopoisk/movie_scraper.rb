@@ -39,8 +39,11 @@ module Scrapers::Kinopoisk
       end
 
       if @agent.page.uri.to_s =~ /index.php/
-         movie_link = @agent.page.at('tr:nth-child(2) .all')
-         return @movie_hash unless movie_link
+         movie_link = @agent.page.at('.most_wanted .name a')
+         unless movie_link
+          puts "No movie link!!!"
+          return @movie_hash
+         end
          @agent.get(movie_link[:href])
       end
 
@@ -59,7 +62,10 @@ module Scrapers::Kinopoisk
       end
 
       premier_td_block = find_td('премьера (РФ)')
-      @movie_hash[:premier_date] = Utils.convert_russian_date(premier_td_block.at_css('a.all').text) if premier_td_block
+
+      if premier_td_block && premier_td_block.at_css('a.all')
+        @movie_hash[:premier_date] = Utils.convert_russian_date(premier_td_block.at_css('a.all').text)
+      end
 
       about_block = @agent.page.at('.news ._reachbanner_')
       @movie_hash[:about] = about_block.text if about_block
@@ -68,6 +74,8 @@ module Scrapers::Kinopoisk
       @movie_hash[:director] = director_block.text if director_block
 
       scrap_actors
+
+      ap @movie_hash
 
       @movie_hash
     end

@@ -45,10 +45,17 @@ namespace :scrap do
 end
 
 
+task :update_3d_for_movies => [:environment] do
 
+  Show.in_3d.all.map(&:movie).uniq.each do |movie|
+    movie.update_attribute(:is_3d, true)
+  end
+
+end
 
 task :reset_shows => :environment do
   Show.delete_all
+  Movie.update_all :shows_count => 0
 end
 
 task :reset_movies=> :environment do
