@@ -12,6 +12,7 @@ class Movie < ActiveRecord::Base
   }
 
   named_scope :in_3d, :conditions => {:is_3d => 1}
+  named_scope :without_info, :conditions => {:about => nil}
 
   named_scope :actual, lambda {||
     {:conditions => "(select id FROM shows AS actual_shows WHERE
