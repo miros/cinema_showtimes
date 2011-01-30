@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4561840-67ae-45c6-9bf8-3ab0cc92afa0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" afterPath="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/scrap.rake" afterPath="$PROJECT_DIR$/lib/tasks/scrap.rake" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="cinema_showtimes.iws" />
@@ -32,19 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scrap.rake" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="scrap.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/scrap.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="54" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movie_scraper.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="90" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.60126585">
+            <state line="25" column="49" selection-start="729" selection-end="729" vertical-scroll-proportion="0.6413502">
               <folding />
             </state>
           </provider>
@@ -103,8 +94,8 @@
         <option value="$PROJECT_DIR$/lib/tasks/cron.rake" />
         <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/scrap.rake" />
         <option value="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/scrap.rake" />
       </list>
     </option>
   </component>
@@ -613,11 +604,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha/scraper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="125" selection-end="125" vertical-scroll-proportion="0.28237793" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="2" selection-start="105" selection-end="105" vertical-scroll-proportion="0.24203822" />
@@ -697,16 +683,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/scrap.rake">
+    <entry file="file://$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="54" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+        <state line="66" column="90" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.60126585">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb">
+    <entry file="file:///usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/base.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="90" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.60126585">
+        <state line="636" column="10" selection-start="32970" selection-end="32970" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/scrap.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="49" selection-start="729" selection-end="729" vertical-scroll-proportion="0.6413502">
           <folding />
         </state>
       </provider>

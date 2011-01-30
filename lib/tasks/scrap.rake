@@ -22,6 +22,10 @@ namespace :scrap do
     update_kinopoisk_info { Movie.all }  
   end
 
+  task :kinopoisk_new_films => :environment do
+    update_kinopoisk_info { Movie.all(:limit => 200, :order => 'id desc') }
+  end
+
   task :ratings => :environment do
     update_kinopoisk_info { Movie.with_outdated_ratings }
   end
