@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4561840-67ae-45c6-9bf8-3ab0cc92afa0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/scrap.rake" afterPath="$PROJECT_DIR$/lib/tasks/scrap.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" afterPath="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="cinema_showtimes.iws" />
@@ -32,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scrap.rake" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/scrap.rake">
+      <file leaf-file-name="movie_scraper.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="49" selection-start="729" selection-end="729" vertical-scroll-proportion="0.6413502">
+            <state line="50" column="33" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.15822785">
               <folding />
             </state>
           </provider>
@@ -94,8 +94,8 @@
         <option value="$PROJECT_DIR$/lib/tasks/cron.rake" />
         <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/scrap.rake" />
+        <option value="$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb" />
       </list>
     </option>
   </component>
@@ -150,6 +150,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kinopoisk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -683,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="90" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.60126585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/ruby/lib/ruby/gems/1.9.1/gems/activerecord-2.3.8/lib/active_record/base.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="636" column="10" selection-start="32970" selection-end="32970" vertical-scroll-proportion="0.33333334">
@@ -700,6 +747,13 @@
     <entry file="file://$PROJECT_DIR$/lib/tasks/scrap.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="49" selection-start="729" selection-end="729" vertical-scroll-proportion="0.6413502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/scrapers/kinopoisk/movie_scraper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="33" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.15822785">
           <folding />
         </state>
       </provider>
