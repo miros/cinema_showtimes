@@ -122,6 +122,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] hoe (v2.6.2, /usr/local/ruby/lib/ruby/gems/1.9.1/gems/hoe-2.6.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rubyforge (v2.0.4, /usr/local/ruby/lib/ruby/gems/1.9.1/gems/rubyforge-2.0.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] newrelic_rpm (v2.13.3, /usr/local/ruby/lib/ruby/gems/1.9.1/gems/newrelic_rpm-2.13.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /home/miros/.rvm/gems/ruby-1.9.2-p0@global/gems/rake-0.8.7)" level="application" />
   </component>
 </module>
 
