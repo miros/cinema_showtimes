@@ -42,7 +42,16 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/movies/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="144" selection-end="144" vertical-scroll-proportion="0.16593887">
+            <state line="11" column="12" selection-start="406" selection-end="406" vertical-scroll-proportion="0.91266376">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="-2.6206896">
               <folding />
             </state>
           </provider>
@@ -207,6 +216,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cinema_showtimes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,11 +702,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/scrapers/afisha/shows_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="16" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.37982196" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/shows_creator.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.61989343" />
@@ -717,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/layout_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="284" selection-end="284" vertical-scroll-proportion="0.18410853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Capfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="27" selection-start="159" selection-end="159" vertical-scroll-proportion="-1.9">
@@ -738,9 +775,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/layout_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="284" selection-end="284" vertical-scroll-proportion="0.18410853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="-2.6206896">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="144" selection-end="144" vertical-scroll-proportion="0.16593887">
+        <state line="11" column="12" selection-start="406" selection-end="406" vertical-scroll-proportion="0.91266376">
           <folding />
         </state>
       </provider>
